@@ -1,0 +1,596 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="以六個可操作的神經科學單元，探索知覺、表徵、回饋與抑制。包含12題科學測驗與6個不計分反思。">
+  <meta name="theme-color" content="#152c40">
+  <title>你所看見的世界，大腦如何共同完成？</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%23152c40'/%3E%3Cpath d='M9 12L29 12L20 29Z' fill='none' stroke='%234ad4b2' stroke-width='2'/%3E%3Cg fill='%234ad4b2'%3E%3Ccircle cx='9' cy='12' r='4'/%3E%3Ccircle cx='29' cy='12' r='4'/%3E%3Ccircle cx='20' cy='29' r='4'/%3E%3C/g%3E%3C/svg%3E">
+  <style>@charset "UTF-8";
+:root{--ink:#152c40;--muted:#4c6475;--accent:#087665;--coral:#ab422c;--blue:#235f9a;--line:#c9d7df;--soft:#eaf1f4;--paper:#f8fbfc;--white:#fff;--serif:"Songti TC","Noto Serif TC","PMingLiU",serif;--sans:-apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:1rem/1.8 var(--sans)}button,input,select,textarea{font:inherit}button,a,input,select,textarea{-webkit-tap-highlight-color:transparent}button{cursor:pointer}a{color:var(--accent);text-underline-offset:4px}a:hover{text-decoration-thickness:2px}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--blue);outline-offset:4px}button:disabled{cursor:default}h1,h2,h3,h4,p{margin:0}h2{font:600 clamp(1.9rem,3.8vw,3rem)/1.35 var(--serif);letter-spacing:.015em}h3{font-size:1.3rem;line-height:1.5}h4{font-size:1rem}p+p{margin-top:1rem}fieldset{border:0;padding:0;margin:0;min-width:0}legend{width:100%;padding:0}svg{display:block;width:100%;height:auto;max-width:100%}svg text{font-family:var(--sans)}[hidden]{display:none!important}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.skip-link{position:absolute;z-index:20;top:-80px;left:16px;background:white;padding:10px 20px}.skip-link:focus{top:10px}.topbar{display:flex;justify-content:space-between;align-items:center;padding:18px 4vw;background:var(--ink);color:#fff;gap:18px}.brand{display:flex;gap:13px;align-items:center;font-size:.82rem;letter-spacing:.1em;font-weight:700;text-decoration:none;color:#fff;line-height:1.4}.brand small{display:block;font-size:.78rem;letter-spacing:.05em;font-weight:400;color:#d7e5ed}.brand-mark{font-family:var(--serif);font-size:1.8rem;border:1px solid #7898a9;border-radius:50%;width:44px;height:44px;display:flex;align-items:center;justify-content:center;letter-spacing:0}.brand-mark span{color:#62e1be;font-size:1rem}.top-actions{display:flex;gap:18px;align-items:center}.local-label{font-size:.85rem;color:#d7e5ed}.text-button{border:0;background:none;color:inherit;text-decoration:underline;text-underline-offset:5px;font-size:.9rem;padding:8px}.shell{display:grid;grid-template-columns:290px minmax(0,1fr);max-width:1440px;margin:auto}.sidebar{padding:38px 26px;border-right:1px solid var(--line);background:#f0f5f7}.sidebar-intro h1{font:600 1.5rem/1.6 var(--serif);margin:14px 0}.sidebar-intro p{font-size:.9rem;color:var(--muted)}.eyebrow{display:block;color:var(--accent);font-size:.8rem;font-weight:700;letter-spacing:.12em}.sidebar nav{display:grid;gap:6px;margin:30px -8px}.nav-item{display:flex;align-items:center;gap:12px;padding:11px 12px;border:1px solid transparent;border-radius:7px;text-decoration:none;color:var(--muted);font-size:.9rem;line-height:1.5}.nav-item[aria-current="page"]{background:white;border-color:var(--line);color:var(--ink);box-shadow:0 2px 5px #152c4005;font-weight:600}.nav-num{font-size:.78rem;font-weight:700;color:var(--accent);width:26px;flex:none}.nav-item .nav-check{margin-left:auto;font-size:.75rem;color:var(--accent)}.sidebar-progress{border-top:1px solid var(--line);padding-top:20px;font-size:.8rem}.progress-label{display:flex;justify-content:space-between}.sidebar-progress p{color:var(--muted);font-size:.75rem;margin-top:8px}progress{width:100%;height:6px;border:0;border-radius:10px;margin:12px 0 0;background:#d5e1e7}progress::-webkit-progress-bar{background:#d5e1e7;border-radius:10px}progress::-webkit-progress-value{background:var(--accent);border-radius:10px}progress::-moz-progress-bar{background:var(--accent)}main{padding:42px clamp(22px,4vw,60px) 60px;min-width:0;outline:none}.page-head{display:flex;align-items:flex-start;justify-content:space-between;gap:24px;margin-bottom:28px}.page-head h2{margin-top:10px}.chapter-index{color:var(--ink);font-size:3.5rem;font-family:var(--serif);line-height:1;opacity:.17}.lead{font-size:1.05rem;color:var(--muted);max-width:48em;margin-top:16px}.intro-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(230px,.83fr);gap:32px;align-items:center}.intro-visual{border:1px solid var(--line);border-radius:13px;overflow:hidden;background:white}.intro-visual svg{padding:12px}.figure-caption{padding:12px 16px;border-top:1px solid var(--line);font-size:.85rem;color:var(--muted)}.callout{border-left:3px solid var(--accent);padding:4px 0 4px 18px;margin:24px 0;color:var(--ink)}.privacy{font-size:.85rem;padding:18px 20px;background:var(--soft);border-radius:8px;margin-top:28px}.privacy p{color:var(--muted)}.privacy strong{font-weight:650}.storage-warning{color:var(--coral);margin-top:8px}.pill{display:inline-block;border:1px solid var(--line);border-radius:30px;padding:3px 10px;font-size:.78rem;color:var(--muted);line-height:1.6}.pill.science{background:#e1f3ec;border-color:#b2d9cc;color:#075f52}.pill.reflect{background:#f8eddf;border-color:#dbc5a7;color:#74551c}.action-row{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:22px}.btn{border:1px solid var(--accent);color:white;background:var(--accent);border-radius:6px;padding:10px 18px;font-weight:600;line-height:1.5;min-height:44px;text-decoration:none;display:inline-flex;justify-content:center;align-items:center;font-size:.94rem}.btn:hover{filter:brightness(.94)}.btn-secondary{background:transparent;color:var(--ink);border-color:var(--line)}.danger{background:var(--coral);border-color:var(--coral)}.small-note{font-size:.85rem;color:var(--muted)}.section-title{display:flex;align-items:center;gap:12px;margin:36px 0 18px}.section-title .line{height:1px;flex:1;background:var(--line)}.section-title span{font-size:.8rem;letter-spacing:.1em;font-weight:700;color:var(--muted)}.goal{display:flex;gap:12px;align-items:baseline;font-size:.94rem;margin-bottom:24px}.goal strong{flex:none;color:var(--accent);font-size:.8rem}.prose{max-width:52em}.concept-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin:22px 0}.concept{padding-top:14px;border-top:2px solid var(--line)}.concept h3{font-size:1rem;margin-bottom:8px}.concept p{font-size:.92rem;color:var(--muted)}.demo{background:white;border:1px solid var(--line);border-radius:10px;padding:24px;margin:24px 0}.demo-header{display:flex;justify-content:space-between;gap:15px;margin-bottom:18px}.demo-header h3{font-size:1.15rem}.demo-controls{display:flex;flex-wrap:wrap;gap:12px 22px;align-items:center;margin:14px 0}.control{display:flex;align-items:center;gap:9px;flex-wrap:wrap;font-size:.9rem}.control input[type=number]{width:80px}.control input[type=range]{max-width:100%;width:180px}.control label{max-width:100%}.demo-output{padding:12px 16px;background:var(--soft);border-radius:5px;line-height:1.6;font-size:.93rem;margin-top:14px}.sim-note{font-size:.82rem;color:var(--muted);margin-top:14px}.legend{display:flex;gap:8px 18px;flex-wrap:wrap;font-size:.86rem;margin-top:12px;color:var(--muted)}.figure{max-width:720px;margin:12px auto}.figure svg{max-height:400px}.chip{display:inline-flex;align-items:center;gap:5px;border:1px solid var(--line);border-radius:5px;padding:4px 8px;font-size:.85rem}.demo table{border-collapse:collapse;width:100%;font-size:.85rem;table-layout:fixed;margin:12px 0}.demo th,.demo td{padding:8px 3px;text-align:center;border-bottom:1px solid var(--line);overflow-wrap:anywhere}.demo th:first-child,.demo td:first-child{text-align:left;width:28%}.takeaway{font:600 1.2rem/1.8 var(--serif);color:var(--ink);padding:20px 0;border-bottom:1px solid var(--line);border-top:1px solid var(--line);margin:26px 0}.question{border-top:1px solid var(--line);padding:28px 0}.question:first-child{border-top:0;padding-top:0}.q-meta{display:flex;gap:12px;align-items:center;margin-bottom:12px;color:var(--muted);font-size:.83rem}.q-prompt{display:block;font-size:1.08rem;font-weight:600;line-height:1.8;margin-bottom:16px}.options{display:grid;gap:9px}.option{display:flex;gap:10px;align-items:flex-start;background:white;border:1px solid var(--line);border-radius:7px;padding:13px 15px;cursor:pointer;min-height:48px;line-height:1.7}.option:has(input:checked){border-color:var(--accent);background:#eaf6f1;box-shadow:inset 3px 0 var(--accent)}.option input{margin:6px 0 0;flex:none;accent-color:var(--accent);width:17px;height:17px}.option-letter{font-size:.85rem;color:var(--muted);font-weight:600;flex:none}.option-text{font-size:.94rem}.confidence{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;margin-top:18px;color:var(--muted);font-size:.86rem}.confidence input[type=range]{width:150px;max-width:100%}.confidence input[type=number]{width:70px}.confidence span{font-variant-numeric:tabular-nums}input[type=range]{accent-color:var(--accent);min-height:28px}input[type=number],select,textarea{border:1px solid var(--line);border-radius:5px;background:white;color:var(--ink);padding:6px 9px;font-size:1rem;max-width:100%}input[type=checkbox]{accent-color:var(--accent);width:17px;height:17px}textarea{width:100%;resize:vertical;min-height:90px;margin-top:8px;line-height:1.7}.validation{color:var(--coral);font-size:.9rem;margin-top:12px}.feedback{padding:20px;border:1px solid #a9d1c4;background:#edf7f2;border-radius:8px;margin-top:20px}.feedback.wrong{background:#fff3ed;border-color:#ddbba9}.feedback h4{font-size:1.08rem}.feedback p{font-size:.94rem;margin-top:10px}.answer-history{font-size:.82rem;color:var(--muted);margin-top:10px}.explanations{margin-top:18px}.explanations summary{cursor:pointer;color:var(--ink);font-weight:600;font-size:.92rem;padding:6px 0}.explanation{border-top:1px solid var(--line);padding:14px 0;font-size:.92rem}.explanation strong{display:block;margin-bottom:4px}.explanation.correct strong{color:#075f52}.explanation p{color:var(--muted);margin:0}.source-note{font-size:.8rem;margin-top:12px;color:var(--muted)}.reflection{margin-top:32px;background:#fff9f0;border:1px solid #dfd1bc;border-radius:9px;padding:24px}.reflection .option{background:#fffdf8;border-color:#dfd1bc}.reflection .option:has(input:checked){background:#f8efd9;border-color:#927031;box-shadow:inset 3px 0 #927031}.reflection h3{margin:14px 0}.reflection .reflection-note{font-size:.9rem;color:#6c583d;margin-bottom:18px}.reflection .small-note{color:#6c583d}.reason-label{display:block;font-size:.9rem;font-weight:600;margin-top:18px}.saved-label{font-size:.85rem;color:#705322;margin-top:12px;min-height:1.8em}.chapter-end{display:flex;justify-content:space-between;gap:18px;align-items:center;border-top:1px solid var(--line);padding-top:24px;margin-top:34px}.chapter-end p{font-size:.87rem;color:var(--muted)}.summary-score{display:flex;align-items:baseline;gap:12px;margin:22px 0}.summary-score strong{font:600 3.5rem/1.2 var(--serif);color:var(--accent)}.summary-score span{color:var(--muted)}.summary-grid{display:grid;gap:12px;margin-top:24px}.concept-summary{padding:20px 0;border-top:1px solid var(--line)}.concept-summary-title{display:flex;justify-content:space-between;gap:15px;align-items:baseline}.concept-summary h3{font-size:1.05rem}.concept-summary p{font-size:.9rem;color:var(--muted);margin:8px 0 0}.concept-summary ul{padding-left:20px;font-size:.9rem;line-height:1.8;margin:12px 0}.summary-table{border-collapse:collapse;width:100%;font-size:.92rem;margin:18px 0}.summary-table th,.summary-table td{text-align:left;border-bottom:1px solid var(--line);padding:10px 6px;vertical-align:top;overflow-wrap:anywhere}.comparison{padding:18px 0;margin:18px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-size:.94rem}.footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;padding:20px 4vw;color:var(--muted);border-top:1px solid var(--line);font-size:.78rem}dialog{border:1px solid var(--line);border-radius:10px;padding:28px;max-width:480px;width:calc(100% - 32px);color:var(--ink);box-shadow:0 16px 60px #152c4040}dialog::backdrop{background:#152c4077}dialog h2{font-size:1.55rem;margin:12px 0}dialog p{font-size:.95rem}.noscript{padding:30px;color:var(--coral)}
+@media(min-width:1100px){.sidebar{position:sticky;top:0;align-self:start;min-height:calc(100vh - 84px)}}
+@media(max-width:1050px){.shell{grid-template-columns:235px minmax(0,1fr)}.sidebar{padding:30px 18px}.sidebar-intro h1{font-size:1.3rem}.intro-layout{grid-template-columns:1fr}.intro-visual{max-width:420px}.concept-grid{grid-template-columns:1fr;gap:14px}.concept p{max-width:52em}.chapter-index{font-size:2.5rem}}
+@media(max-width:760px){.topbar{padding:14px 20px}.brand small{font-size:.75rem}.local-label{display:none}.top-actions{gap:0}.shell{display:block}.sidebar{padding:18px 20px;border-right:0;border-bottom:1px solid var(--line)}.sidebar-intro{display:none}.sidebar nav{display:flex;flex-wrap:wrap;gap:5px;margin:0}.nav-item{padding:7px 9px;font-size:.82rem;gap:5px;min-height:42px}.nav-num{width:auto;font-size:.73rem}.nav-check{display:none}.sidebar-progress{border:0;padding:14px 0 0}.sidebar-progress p{display:none}progress{margin:8px 0 0}.progress-label{font-size:.75rem}main{padding:28px 20px 40px}.page-head{gap:10px}.page-head h2{font-size:1.95rem}.chapter-index{font-size:2.8rem}.lead{font-size:1rem}.intro-layout{gap:22px}.demo{padding:18px 14px}.demo-controls{gap:10px}.control{width:100%;font-size:.88rem}.control input[type=range]{width:min(180px,52vw)}.question{padding:24px 0}.q-prompt{font-size:1.03rem}.option{padding:12px 11px}.option-text{font-size:.93rem}.reflection{padding:20px 15px}.chapter-end{align-items:flex-start;flex-direction:column}.concept-summary-title{align-items:flex-start}.summary-score strong{font-size:3rem}.footer{padding:18px 20px}.confidence{gap:7px}.confidence input[type=range]{width:120px}.feedback{padding:16px}.privacy{padding:16px}.eyebrow{font-size:.76rem}.demo-header{flex-wrap:wrap}}
+@media(max-width:360px){.brand{gap:8px;font-size:.73rem}.brand-mark{width:36px;height:36px;font-size:1.5rem}.topbar{padding:12px 14px}.sidebar{padding:16px 14px}main{padding:24px 14px}.page-head h2{font-size:1.8rem}.chapter-index{font-size:2.2rem}.nav-item{font-size:.78rem;padding:6px 7px}.confidence input[type=range]{width:95px}.confidence input[type=number]{width:64px}.summary-table{font-size:.83rem}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳至教材內容</a>
+  <header class="topbar">
+    <a class="brand" href="#intro"><span class="brand-mark" aria-hidden="true">N<span>•</span></span><span>NETWORKS <small>神經科學互動課</small></span></a>
+    <div class="top-actions"><span class="local-label">本機學習紀錄</span><button type="button" id="reset-open" class="text-button">清除紀錄</button></div>
+  </header>
+  <div class="shell">
+    <aside class="sidebar" aria-label="課程導航">
+      <div class="sidebar-intro"><span class="eyebrow">從知覺，走進網路</span><h1>你所看見的世界，<br>大腦如何共同完成？</h1><p>不是一顆神經元的獨白，<br>而是一個網路的協作。</p></div>
+      <nav id="course-nav" aria-label="教材單元"></nav>
+      <div class="sidebar-progress"><div class="progress-label"><span>科學題作答進度</span><strong id="progress-text">0 / 12</strong></div><progress id="progress" max="12" value="0">0 / 12</progress><p>12 題科學測驗 · 6 個不計分反思</p></div>
+    </aside>
+    <main id="main" tabindex="-1"></main>
+  </div>
+  <footer class="footer"><span>課堂脈絡：《Networks》／陳嶽鵬</span><span>原創圖解與題目 · 適用大學部神經科學</span></footer>
+  <div class="sr-only" id="announcer" role="status" aria-live="polite"></div>
+  <dialog id="reset-dialog" aria-labelledby="reset-title"><form method="dialog"><span class="eyebrow">本機紀錄</span><h2 id="reset-title">清除這份教材的學習紀錄？</h2><p>將刪除本瀏覽器保存的初答、重試、把握度、視覺選擇與反思文字。此操作無法復原。</p><div class="action-row"><button class="btn btn-secondary" value="cancel">保留紀錄</button><button class="btn danger" id="reset-confirm" value="confirm">確認清除</button></div></form></dialog>
+  <noscript><p class="noscript">請啟用 JavaScript，才能使用圖解與測驗。教材不需要網路連線或帳號。</p></noscript>
+  <script id="lesson-data" type="application/json">[{"id": 1, "title": "同樣的神經元，為什麼會有不同能力？", "kicker": "Connections Shape Function", "subtitle": "從迴路連結到皮質層次，理解能力如何在互動中形成。", "pages": "2–16", "goal": "比較神經元數目相同、連結不同的迴路，解釋興奮、抑制與不同方向的連結如何改變整體反應。", "paragraphs": ["想像兩組神經元擁有相同的細胞數與類型，卻接上不同的連線。訊號可以一路向前、繞回原處，或影響鄰近的群體；不同路徑會改變訊號傳遞、整合與持續的方式。湧現（emergence）指的是整體互動形成的性質，不能只從一顆細胞或細胞數目讀出來。", "興奮性輸入通常提高目標細胞放電的可能性，抑制性輸入通常降低它；實際結果取決於輸入的位置、時間與細胞狀態。新皮質常以六層描述，但各區的層次發達程度不同。前饋連結可將資訊送往較高階區域，回饋可讓較高階活動影響較低階處理，側向連結則協調同一區域或相近層級的活動；它們並非只存在於某一層。"], "concepts": [{"term": "湧現與連結結構", "text": "整體能力取決於誰連到誰、連結強度與訊號時序。相同的神經元數目，不保證相同的迴路動態或功能。"}, {"term": "興奮與抑制", "text": "興奮與抑制共同調整反應的大小、時機與選擇性。抑制能限制過度擴散，讓某些活動模式更容易與其他模式區分。"}, {"term": "六層與三種連結方向", "text": "典型感覺皮質的第 IV 層是重要的丘腦輸入接受層，跨層迴路再整合與傳遞訊號。前饋、回饋與側向描述資訊互動的方向，實際迴路包含多層、多區域與多條路徑。"}], "takeaway": "看懂一個網路，先問它如何互相影響，而不只問它有多少神經元。", "questions": [{"id": "m1q1", "concept": "連結結構與湧現", "prompt": "研究小組建立兩個簡化迴路，神經元的數目、類型與單細胞特性相同，也給予相同的短暫輸入。甲的訊號主要單向傳遞，輸入結束後活動很快消退；乙有回返興奮與選擇性抑制，某個活動模式可以多維持一段時間。哪個解釋最符合這項結果？", "options": [{"text": "乙的回返連結能再次支持活動，抑制則限制其他活動模式的擴散。", "explanation": "回返興奮讓先前被啟動的細胞再次得到支持，因此短暫輸入結束後仍可能保留活動。選擇性抑制可減少競爭模式的參與，使活動集中於某個模式；是否能維持仍取決於連結強度、時間常數與細胞狀態。這是連結改變整體動態的例子。"}, {"text": "乙的活動主要靠訊號繞過較長路徑，維持現象只是同一批訊號較晚抵達。", "explanation": "路徑長短與傳遞延遲確實能影響反應的時序，但題目中的回返連結讓活動能再次支持先前的細胞。把持續活動只理解為延遲，忽略了循環支持與選擇性抑制如何改變整個模式；要分辨兩者還可追蹤各細胞的活動時間。"}, {"text": "乙的抑制讓每顆細胞儲存輸入，所以只要增加抑制就能延長活動。", "explanation": "抑制不是把輸入存進單顆細胞的記憶盒，而是改變目標細胞與迴路的反應條件。適當抑制可能穩定或篩選活動，但過強抑制也可能使活動消退；維持活動需要考慮興奮、抑制與回返路徑的共同作用。"}, {"text": "甲與乙的差異只在訊號傳得快慢；連線方向不會改變網路能做的事。", "explanation": "傳遞速度會影響活動時序，卻不能單獨解釋某個模式為何得到反覆支持。單向與回返路徑會改變訊號能否再次影響先前的細胞，因此可能產生不同的整體功能，而不只是把相同反應播放得更快或更慢。"}], "answer": 0, "why": "這項比較固定了細胞數與單細胞特性，讓連結結構成為解釋差異的關鍵。回返興奮與抑制的組合可以改變迴路動態，但不是任何回返網路都會自動形成持續活動。"}, {"id": "m1q2", "concept": "層次、主要輸入與跨層互動", "prompt": "你要替同學製作一個典型初級感覺皮質的教學模型：外界刺激經丘腦抵達皮質，之後影響其他層與皮質區域。模型要容易看懂，也要保留真實迴路的複雜性。哪個設計最合適？", "options": [{"text": "把所有輸入接到第 I 層，因為圖上最上方的層一定是訊號入口。", "explanation": "圖上的上下位置表示皮質深度，不等於資訊必須依序通過的步驟。第 I 層包含許多樹突與連結，確實參與訊號整合，但不能因為它在最上方，就把典型主要感覺輸入全放在這裡。"}, {"text": "讓第 VI 層先收下所有感覺輸入，再逐層往上傳，才能呈現六層的順序。", "explanation": "層號不是固定的訊息處理時間表，跨層連結也不只沿相鄰層逐步傳遞。第 VI 層與丘腦有重要互動，但這不代表它是所有丘腦感覺輸入的唯一入口；把六層排成單一路線會遮住迴路中的分流與回返。"}, {"text": "讓第 IV 層接受主要丘腦感覺輸入，再接上跨層路徑，並標示仍有其他輸入與回饋路徑。", "explanation": "對典型初級感覺皮質而言，第 IV 層是重要的丘腦輸入接受層，適合作為教學模型的主要入口。跨層連結讓輸入影響後續整合與輸出，而其他層與區域的連結保留了回饋及替代路徑。這個簡化不能直接套用到所有皮質區域，也不表示所有丘腦輸入都只到第 IV 層。"}, {"text": "保留第 IV 層入口，但移除回饋與側向連結，因為感覺辨識只需一路向前傳。", "explanation": "前饋路徑能帶動感覺資訊往後續區域傳遞，但真實感覺處理也受到回饋與側向互動影響。移除這些連結可作為特定的比較模型，卻不能把它當作完整的感覺迴路說明，否則會漏掉情境、競爭與既有活動對處理的作用。"}], "answer": 2, "why": "好的簡化抓住典型感覺皮質的重要路徑，同時交代適用範圍。第 IV 層的主要輸入角色與多層、多方向互動可以一起呈現，無須把皮質畫成六個依序運作的關卡。"}], "reflection": {"id": "m1r", "prompt": "想起一次小組合作：人數沒有變，但協作方式改變後，成果也不同。你最想先調整哪一種互動？", "options": ["讓每位成員更容易把自己的資訊交給下一位。", "加入回頭檢查與修正想法的機會。", "讓同時進行的工作彼此交流，避免資訊分散。", "先約定如何取捨意見，減少彼此干擾。"], "note": "這是個人反思，不計分，也沒有標準答案。團隊互動只是幫助思考連結的生活類比；人的意圖、責任與溝通，不能直接等同於神經元的興奮或抑制。"}}, {"id": 2, "title": "沒有四隻腳，你仍然認得椅子嗎？", "kicker": "From Features to Meaning", "subtitle": "辨識不是照表查答案，而是把線索整合成可修正的理解。", "pages": "17–20", "goal": "用新奇與被遮蔽的物件，說明特徵整合、分散式表徵、層級處理與回饋如何共同支持辨識。", "paragraphs": ["椅子可以沒有四隻腳，也可能沒有靠背。辨識熟悉物件通常需要整合形狀、局部結構、線索之間的關係與情境，而不是只找某個固定零件。分散式表徵指資訊由群體的活動模式承載：某個特徵可能參與多種物件，一種物件也需要多項線索共同支持。", "在視覺處理的層級中，局部線條與方向等資訊可逐步參與較複雜的形狀與物件表徵；這些層級是功能上的概括，不是整齊的單向流水線。已有經驗與較高階的活動可透過回饋影響較低階處理，幫助理解不完整的輸入。辨識因此可以快速而靈活，也可能受期待影響，需要新證據來修正。"], "concepts": [{"term": "特徵整合與分類", "text": "單一特徵往往不足以決定物件類別。整合多項線索及其關係，可以支持辨識從未看過的外形。"}, {"term": "分散式表徵", "text": "物件資訊可由神經元群體的活動模式承載，部分細胞或特徵會在不同物件間重複參與。這不等於每個類別都由一顆專用細胞完整保存。"}, {"term": "層級處理與回饋", "text": "較低階的感覺線索與較高階的物件、情境表徵互相影響。回饋可協助解讀部分輸入，但仍需接受感覺證據的約束與修正。"}], "takeaway": "你辨識的是線索共同支持的物件，不只是某個零件；熟悉感也仍需要證據。", "questions": [{"id": "m2q1", "concept": "新奇物件的特徵整合", "prompt": "走進設計展，你看到一件從未見過的家具：只有一根彎曲支架，沒有四隻腳，但有適合坐下的承托面，旁邊也有人坐著休息。你很快把它認作椅子。哪個機制最能解釋這種辨識？", "options": [{"text": "椅子的辨識只由腿的數量決定，所以你其實是在忽略視覺資訊。", "explanation": "腿的數量可以提供線索，但不是所有椅子都共享的必要條件，也不是椅子獨有的特徵。承托面、結構關係與使用情境仍提供了視覺證據，因此辨識新外形不需要放棄視覺資訊。"}, {"text": "只要展場有人坐著，情境就能獨自決定物件類別，外形完全不必參與。", "explanation": "使用情境可協助判斷，但人也可能坐在箱子、石頭或地板上，因此單靠這項線索會產生誤認。較合理的解釋是情境與形狀、承托結構共同支持判斷，各項線索的影響也會隨情況改變。"}, {"text": "不同特徵與情境共同形成群體活動模式，支持你將新外形歸入熟悉類別。", "explanation": "新物件仍可能與已知椅子共享部分結構或用途線索，這些資訊可以共同支持類別判斷。分散式表徵與特徵整合讓辨識不必依賴某一個固定零件，或要求先見過完全相同的圖像。這項判斷仍可能出錯，後續觀察可以提高或降低它的可信度。"}, {"text": "大腦先找到一張完全相同的家具影像，才能啟動對應的椅子表徵。", "explanation": "情境已說明你從未見過這件家具，因此完全相同的影像不是這次辨識的必要條件。經驗可提供可重用的特徵與結構關係，使新外形也能與熟悉類別建立連結，而不是每個角度或設計都要另存一張完整照片。"}], "answer": 2, "why": "新奇外形仍可由多項熟悉線索共同辨識。這支持特徵整合與可重用的群體表徵，不代表椅子存在一套對所有文化與情境都固定不變的視覺判準。"}, {"id": "m2q2", "concept": "部分輸入、經驗回饋與修正", "prompt": "在熟悉的咖啡店，你看到桌邊一個大半被外套遮住的物件，只露出幾段邊緣，便先認為是椅子。走近後，新的輪廓顯示那其實是落地燈，你隨即修正判斷。哪個說明最符合這個過程？", "options": [{"text": "較高階的預期一旦形成，就會固定較低階的活動；修正代表辨識系統停止運作。", "explanation": "回饋會影響較低階處理，但不表示它必須永久鎖定感覺活動。新的輪廓讓原先的解釋不再充分，辨識系統可更新判斷；能夠修正正是動態整合證據的表現。"}, {"text": "部分輪廓與熟悉情境共同支持初步辨識，經驗相關的回饋參與處理，新感覺證據再促使判斷更新。", "explanation": "部分感覺線索可沿層級處理，與較高階的物件及情境表徵互動；熟悉咖啡店的經驗使某些解釋更容易被支持。回饋有助於處理遮蔽資訊，卻不保證猜測正確。新輸入與原判斷不符時，持續的整合可以促成修正。"}, {"text": "初步辨識完全來自記憶，因此那些露出的邊緣不可能影響你認出什麼。", "explanation": "過去經驗可影響預期，但露出的邊緣仍提供可支持或限制解釋的感覺資訊。若只由記憶決定，走近後增加的輪廓就不應改變判斷；情境中的修正顯示目前輸入也在參與。"}, {"text": "辨識必須等全部輪廓完整傳到最高階區域，所以先認作椅子只能是隨機猜測。", "explanation": "部分線索與情境就可能足以支持一個有根據、但不確定的初步辨識。層級處理與回饋互動不必等到輸入完整才開始；資訊不足會提高誤認的可能性，卻不等於判斷完全隨機。"}], "answer": 1, "why": "層級處理可以整合局部與較抽象的資訊，回饋則讓已有經驗參與對部分輸入的解讀。這些互動有助於辨識，也留下誤認的可能；新證據能讓原先的解釋改變。"}], "reflection": {"id": "m2r", "prompt": "第一次認識一個人時，我們也容易用少量線索形成標籤。想到最近的一次初步印象，你最想練習哪一種做法？", "options": ["先指出自己實際看見了哪些行為。", "留意哪些印象來自過去經驗與期待。", "等待更多不同情境中的資訊，再下判斷。", "遇到不符合印象的證據時，重新理解對方。"], "note": "這是個人反思，不計分，也沒有標準答案。物件辨識的神經機制只能提供思考線索，不能替人的性格、價值或社會身分下科學定論；社會標籤還受到文化、互動與權力關係影響。"}}, {"id": 3, "title": "不同的物件，能共用一群神經元嗎？", "kicker": "Distributed representation", "subtitle": "從橫直、方圓的活動圖樣，理解表徵與降維。", "pages": "21–28", "goal": "能用族群活動解釋分散式表徵，並指出低維投影保留與省略了哪些差異。", "paragraphs": ["想像四個圖形：橫向長方形、直向長方形、橫向橢圓、直向橢圓。它們有些特徵相同、有些不同；同一群神經元可以在不同圖形出現時，形成不同的活動組合。物件的表徵因此可以分散在族群之中，也可以與其他物件共用部分神經元。", "活動圖樣若有許多維度，我們往往需要投影到較少的軸才能觀看與比較。降維可以保留某些重要關係，卻也可能把原本不同的圖樣畫在同一位置。下方的活動格與投影都是定性教學示意；它們協助理解表徵，並非真實神經資料或生物精確模型。"], "concepts": [{"term": "分散式表徵", "text": "資訊可由多個神經元的活動共同承載；同一神經元也可參與多個物件的表徵。共用成員不代表整體圖樣相同。"}, {"term": "族群活動圖樣", "text": "解讀一個刺激時，要看哪些神經元參與、各自反應如何，以及它們之間的關係。圖上的活動高度是示意反應量，不能解讀為動作電位振幅。"}, {"term": "降維與資訊取捨", "text": "把多維資訊投影到少數軸，能讓某些關係更容易看見。被省略的維度可能仍有辨識價值，因此同一投影位置不保證原始表徵相同。"}], "takeaway": "表徵可以共用神經元；投影可以共用位置。判斷是否相同，仍要問：我們保留了哪些活動與差異？", "questions": [{"id": "m3q1", "concept": "分散式表徵", "prompt": "你切換活動格中的四個圖形，發現橫向長方形與橫向橢圓都讓部分「橫向敏感」單元活躍，但其餘單元的反應不同。哪個解釋最符合這個分散式表徵示意？", "options": [{"text": "兩個物件各有一個專屬神經元；其他活動只是辨識時產生的雜訊。", "explanation": "這把資訊全部歸給單一單元，忽略了題目中隨圖形而改變的族群圖樣。分散式表徵允許多個單元共同承載資訊，不能直接把其他有系統的反應當成雜訊。"}, {"text": "只要共用一個活躍單元，兩個物件的完整表徵就相同。", "explanation": "共用單元可以反映共同特徵，例如橫向延伸，卻不能決定整個活動圖樣。其餘單元仍可能區分輪廓或其他性質，因此部分重疊不等於完整表徵相同。"}, {"text": "兩個物件可以共用部分單元，再由各自的整體活動組合保留差異。", "explanation": "這同時解釋了活動的重疊與差異：共同特徵能使用部分相同單元，而不同特徵能改變其他單元的參與。辨識資訊可存在於族群活動的組合，不必為每個物件安排互不共用的單元。"}, {"text": "只要把所有單元的活動加成一個總量，就足以保留兩個物件的差異。", "explanation": "不同活動組合可能得到相同總量，像兩組分數加總相同，細項卻不同。把圖樣壓成單一總量可能丟掉哪些單元參與的資訊，因此不能保證物件仍可區分。"}], "answer": 2, "why": "分散式表徵的關鍵是整體活動組合。神經元可以跨物件共用，但共用的部分與不同的部分共同決定可辨識的資訊。"}, {"id": "m3q2", "concept": "降維與資訊損失", "prompt": "在一個刻意省略輪廓資訊的二維投影中，橫向長方形與橫向橢圓落在同一點；完整活動格仍顯示兩者有差異。你能從這個結果推論什麼？", "options": [{"text": "這個投影無法呈現兩者的全部差異；同點不代表原始活動圖樣相同。", "explanation": "投影保留了選定的資訊，並省略了其他維度；題目中的輪廓差異正是被省略的部分。多個原始圖樣可以映到同一位置，所以要回到完整活動格或其他保留輪廓的表示，才能檢查那個差異。"}, {"text": "大腦必然把兩個圖形當成同一物件，因為投影點完全重合。", "explanation": "重合發生在我們選擇的示意投影，而不是對完整神經處理的直接觀察。題目已指出完整活動格不同，因此不能用這張低維圖推論大腦必然無法區分。"}, {"text": "把同一張投影圖放大，就能恢復原本省略的輪廓差異。", "explanation": "放大可以幫助看見已經存在的細節，但不會自動補回未被投影保留的維度。若輪廓資訊在映射時已被省略，必須改變表示方式或取回原始資料，才可能呈現差異。"}, {"text": "這表示任何降維都沒有用途，因為只有完整資訊才可以比較。", "explanation": "降維仍能凸顯某些關係，例如共同方向或圖樣的相似性，讓比較更容易。限制在於它對特定問題是否保留了足夠資訊；這次輪廓被省略，不表示所有投影都失去價值。"}], "answer": 0, "why": "降維是一種有目的的資訊取捨。低維圖適合回答什麼問題，取決於所保留的維度；無法從重合的點直接判定原始資訊完全相同。"}], "reflection": {"id": "m3r", "prompt": "兩位同學的總成績或排名相同，能力、努力與處境卻可能不同。如果你要用一個數字比較學習，你最希望一起保留哪種補充資訊？", "options": ["各項能力與作品的表現，讓同分背後的差異可見。", "學習前後的變化，讓進步幅度可見。", "時間、資源與機會的差異，讓學習處境可見。", "學習者自己重視的目標，讓比較的目的可見。"], "note": "這是未計分的價值思考，沒有標準答案，也不評估人格或能力。成績與降維的類比用來思考資訊取捨，不代表教育評量與神經表徵是同一套機制；你可在理由欄說明取捨，或略過。"}}, {"id": 4, "title": "一個反應很強的神經元，能說明多少？", "kicker": "Coarse coding & selectivity", "subtitle": "從重疊的感光曲線，讀懂多通道圖樣與選擇性。", "pages": "29–30", "goal": "能解釋多通道反應如何共同提供辨識線索，並區分神經元選擇性與概念的唯一儲存位置。", "paragraphs": ["人類的 S、M、L 三類圓錐細胞，在不同波長上的敏感度彼此重疊；它們不是三個只接收純紅、純綠、純藍的開關。改變波長時，多個通道的相對反應會一起改變。這提供一個理解粗略編碼的例子：各通道各自涵蓋一段刺激範圍，族群的組合能提供更細的區分線索。", "選擇性描述的是一個神經元對哪些刺激反應較強，並不單憑這點就證明它獨自存放整個概念。下方 S／M／L 曲線與數值僅是定性教學示意，不用來預測個人的色覺；圓錐細胞以分級受體電位反應，曲線高度不是動作電位振幅。一般神經元的活動圖則可示意發放率，但同樣不能讀成動作電位變大。"], "concepts": [{"term": "粗略編碼", "text": "單一通道對一段刺激範圍有反應；多個反應範圍重疊的通道共同形成圖樣。組合能提供比單看「哪個最強」更豐富的線索。"}, {"term": "S／M／L 重疊敏感度", "text": "三類圓錐細胞分別偏向較短、中等與較長波長，但敏感範圍重疊。反應也受光強等條件影響；此處固定其他條件，只比較波長造成的示意變化。"}, {"term": "選擇性與表徵位置", "text": "某神經元對一類刺激反應較強，表示它具有選擇性。要判斷它是否為辨識所必要、是否足以支持辨識，以及有哪些其他成員參與，仍需要額外證據。"}], "takeaway": "辨識線索常在多通道的相對圖樣裡。反應最強的成員可以很重要，但它的選擇性不等於整個概念只屬於它。", "questions": [{"id": "m4q1", "concept": "重疊通道與粗略編碼", "prompt": "你在示意曲線上比較兩個波長，兩次都是 M 通道最強，但 S 與 L 的相對反應不同。假設光強與其他條件固定，哪種解讀最有助於區分這兩個刺激？", "options": [{"text": "只記錄 M 最強；最強通道相同就代表兩個波長相同。", "explanation": "「哪個最強」把整個反應圖樣壓成單一標籤，省略了 S 與 L 的差異。不同波長可以有同一個最強通道，因此這個標籤不足以判定波長相同。"}, {"text": "比較 S、M、L 的相對反應組合，保留各通道提供的區分線索。", "explanation": "敏感度重疊使同一波長能影響多個通道，不同波長則可能改變它們的相對反應。題目固定其他條件後，整體組合保留了 S 與 L 的差異，能比只記住 M 最強提供更多區分線索。"}, {"text": "把三個通道的反應全部加總，只要總量不同就能完整判定波長。", "explanation": "加總會失去各通道如何分配反應的資訊，不同組合也可能有相同總量。總量可能有助於描述整體反應，但不能保證它完整保留波長的辨識線索。"}, {"text": "把 M 通道的較高反應讀成動作電位較大，再用振幅判定波長。", "explanation": "圓錐細胞的感光反應是分級受體電位，此圖不是它們的動作電位振幅。即使在一般會發放動作電位的神經元中，活動增強也不能直接等同於單次動作電位變大，因此這種讀法混淆了圖示量與電訊號。"}], "answer": 1, "why": "粗略編碼利用多個重疊通道的組合。這題比較的是固定條件下的相對圖樣；真實色覺還涉及光強、適應與後續神經處理，不能把示意數值當成完整色覺模型。"}, {"id": "m4q2", "concept": "神經元選擇性", "prompt": "研究者記錄到一個神經元：在受測刺激中，它看到不同版本的同一位熟人時反應較強，看到其他人時反應較弱。僅根據這份紀錄，哪個結論最有根據？", "options": [{"text": "這個神經元一定獨自儲存這位熟人的完整概念與全部記憶。", "explanation": "較強反應支持選擇性，卻沒有直接顯示全部記憶存在哪裡，也沒有排除其他神經元參與。從一個成員的反應推到整個概念只存放於它，超出了這份紀錄能支持的範圍。"}, {"text": "只要讓這個神經元停止活動，這個人就必然永遠無法被認出。", "explanation": "觀察反應與辨識同時出現，尚未證明該神經元是辨識的必要條件。要檢驗必要性，需要適當干預與行為測試；「永遠無法認出」還涉及網路補償與時間變化，不能直接推論。"}, {"text": "既然表徵可以分散，這個神經元的選擇性就必然是測量錯誤。", "explanation": "分散式表徵與單一神經元具有選擇性可以同時存在。某個成員可以偏好特定刺激，同時與其他成員共同參與更廣的活動圖樣，因此兩者並不互相排斥。"}, {"text": "它在受測刺激中具有選擇性，但其他成員與整體網路仍可能參與辨識。", "explanation": "這個結論保留了直接觀察到的事實：神經元對某些刺激反應較強。它也承認測試範圍與紀錄方式的限制；要判斷是否為唯一儲存位置、是否必要或充分，都還需要更多證據。"}], "answer": 3, "why": "選擇性回答的是「這個成員對哪些刺激反應較強」。它本身無法回答整個概念是否只存放在該成員，也不能單獨證明辨識的必要性或充分性。"}], "reflection": {"id": "m4r", "prompt": "一個團隊成果常被歸功於最顯眼的人。如果你要說明這次成果如何出現，你會先從哪個角度切入？", "options": ["看關鍵成員做了哪些無法輕易替代的工作。", "看成員之間如何互相提供資訊、修正與支援。", "看資源、制度與分工如何讓貢獻得以發生。", "先列出多個可能因素，再找證據比較各自的影響。"], "note": "這是未計分的歸因思考，沒有標準答案，也不評估人格或能力。團隊類比用來練習區分顯眼、相關與因果；它不表示人際合作可直接等同神經運作。你可寫下理由，或略過。"}}, {"id": 5, "title": "為什麼同一張圖，會有兩種世界？", "kicker": "RECURRENCE & ATTRACTORS", "subtitle": "感覺訊息抵達之後，網路仍會繼續交換訊息。", "pages": "31–34", "goal": "說明回饋如何影響模糊知覺，並用小擾動後的變化辨認吸引子。", "paragraphs": ["看著 Necker 立方體時，線條沒有改變，你卻可能先看見這個面朝前，接著看見另一個面朝前。感覺輸入為網路提供線索；高層的期待與情境也能經由回饋，改變各種解讀受到的支持。這種循環交換，讓知覺不只是一條從輸入通往輸出的單行道。", "相互連結的活動可能逐漸靠近某些穩定狀態：受到小擾動後，網路仍會回到附近的同一狀態，這就是吸引子的典型特徵。較大的擾動則可能使活動轉向另一個狀態。下方以抽象活動量呈現的示範是定性教學模擬；穩定不等於解讀正確，也不能單憑這個示範推論意識的成因。"], "concepts": [{"term": "回返性興奮", "text": "興奮性連結形成循環，使已出現的活動能繼續影響網路。是否持續、增強或收斂，還取決於抑制、輸入與整個網路的動態。"}, {"term": "高層回饋", "text": "情境、期待或較高層的解讀，可以回頭調整較低層表徵受到的支持。感覺線索仍有約束力；回饋不是任意改寫外界的證據。"}, {"term": "吸引子", "text": "活動從一段範圍內的不同起點出發，會靠近同一個穩定狀態。吸引子描述系統的動態穩定性，沒有替某個信念加上真實性的保證。"}], "takeaway": "同樣的感覺線索可以支持不同解讀；回饋影響哪一種解讀較穩定，而證據仍決定解讀是否可信。", "questions": [{"id": "m5q1", "concept": "回饋與模糊知覺", "prompt": "小安看著同一張 Necker 立方體。朋友提醒「想像左下方的面朝向你」後，小安較容易看見那種方向；圖像的線條完全沒變。哪個解釋最符合本單元的網路觀點？", "options": [{"text": "提示使視網膜收到不同的光線，因此改變了圖像的感覺輸入。", "explanation": "題目已限定圖像與光線線索相同，因此不能把解讀改變歸因於新的視覺輸入。提示可以改變注意與期待，但這些影響不等同於線條本身發生變化。"}, {"text": "視覺處理只會由低層向高層傳遞；提示只能改變口頭回答。", "explanation": "單向前饋可以說明部分特徵處理，卻忽略了高層與低層之間的回饋連結。提示確實也可能影響作答策略，但把所有變化都限制在口頭回答，無法涵蓋回饋影響知覺解讀的可能性。"}, {"text": "提示改變較高層的期待，經由回饋提高某一解讀的支持程度。", "explanation": "模糊圖像提供的線索可以同時相容於多種解讀。提示改變高層期待後，回饋可以讓其中一種表徵更容易取得優勢，因此相同輸入也可能帶來不同的主觀解讀。這是合理的網路機制，不代表單次觀察已定位出特定神經迴路。"}, {"text": "既然提示有效，期待就能讓人看見任何事物，不受感覺線索限制。", "explanation": "回饋能調整解讀的支持程度，卻仍與感覺輸入互動。Necker 立方體本身具有方向歧義；從這個例子推到「任何解讀都可成立」，跨越了證據所支持的範圍。"}], "answer": 2, "why": "關鍵是把「外界線索不變」與「內部支持程度改變」分開：較高層的期待可經由回饋影響競爭中的解讀。這個例子說明一種可能機制，不能單憑提示效果排除注意或作答策略的影響。"}, {"id": "m5q2", "concept": "吸引子與擾動", "prompt": "在定性網路示範中，活動停在狀態 A。你施加一次小擾動，活動短暫偏離 A，移除擾動後又靠近 A。這項觀察最直接支持哪個判斷？", "options": [{"text": "A 在這段擾動範圍內具有吸引子式的穩定性。", "explanation": "小擾動後返回附近的同一狀態，正是吸引子式穩定性的典型表現。結論限於已測試的擾動範圍；更大的擾動仍可能把系統推向另一個狀態。"}, {"text": "A 必定是外界唯一正確的解讀，因為網路會自動回到它。", "explanation": "回到 A 告訴我們的是系統動態，沒有提供 A 是否符合外界的獨立證據。錯誤解讀也可能被內部連結穩定支持，所以穩定性不能代替事實檢驗。"}, {"text": "只要存在吸引子，無論擾動多大，活動都不可能離開 A。", "explanation": "吸引子通常只會吸引某個範圍內的狀態，這個範圍可稱為吸引域。擾動足夠大時，活動可能越過邊界，轉向另一個吸引子；一次小擾動不能證明永久不變。"}, {"text": "回到 A 證明每顆神經元的動作電位振幅都恢復成較大的值。", "explanation": "此示範中的活動量是抽象的網路變數，不是單一動作電位振幅。神經活動強弱常以發放頻率或群體活動討論，不能把圖上曲線直接換算成動作電位大小。"}], "answer": 0, "why": "看擾動後的路徑，才能判斷穩定性：短暫偏離後回返，支持 A 在附近具有吸引作用。是否正確、是否永遠不會切換，以及真實神經元的數值，都需要另外的證據。"}], "reflection": {"id": "m5r", "prompt": "你對一件事越想越確定，卻還沒有新增外部證據。你會優先採取哪一步？", "options": ["先寫下哪些觀察可能讓我改變想法，再尋找那些觀察。", "請一位立場不同的人提出他最有力的解釋。", "暫時保留判斷，等取得更多資料再決定。", "先依目前判斷行動，同時設定檢查與修正的時間。"], "note": "這題不計分，各選項可以有不同的生活理由。吸引子提供思考穩定性的比喻，不能用來診斷你的信念，也不能證明某一種決策方式最正確；可補充你需要哪些證據才願意修正判斷。"}}, {"id": 6, "title": "讓訊號站得住，也讓其他訊號有空間", "kicker": "INHIBITION & COMPETITION", "subtitle": "抑制可以限制放大、塑造競爭，讓網路活動更有選擇性。", "pages": "35–38", "goal": "辨認抑制對回返活動與稀疏性的作用，並依抑制細胞的招募路徑區分前饋與回饋抑制。", "paragraphs": ["回返性興奮能維持活動，也可能把活動持續放大。抑制性連結可限制這種增強；當多個候選表徵競爭時，抑制也可能降低較弱候選的活動，使同時高度活躍的單元變少。這是稀疏活動的一種形成機制，但效果仍取決於連結方式與輸入。", "分辨前饋與回饋抑制，先追蹤誰招募了抑制細胞：同一條輸入同時驅動主細胞與抑制細胞，是典型前饋抑制；主細胞的活動再招募抑制細胞並回頭抑制主細胞，是典型回饋抑制。下方滑桿只呈現定性教學情境；數值不是生物量測，活動量也不是動作電位振幅。"], "concepts": [{"term": "興奮與抑制的調節", "text": "興奮性作用提高活動發生的機會，抑制性作用可降低活動或限制其增強。抑制不足可能造成過度放大，實際結果仍由整個迴路與輸入決定。"}, {"term": "競爭與稀疏性", "text": "抑制可以使候選表徵彼此競爭，讓較少單元保持高活動。稀疏不是完全沉默，也不表示所有競爭都只剩一個贏家。"}, {"term": "前饋與回饋抑制", "text": "前饋抑制由上游輸入招募抑制細胞；回饋抑制由主細胞的活動招募抑制細胞。分類依據是連結與招募路徑，不能只看抑制出現得早或晚。"}], "takeaway": "抑制會改變網路如何放大與選擇訊號；要辨認抑制迴路，追蹤招募路徑比只看活動下降更有用。", "questions": [{"id": "m6q1", "concept": "抑制與回返放大", "prompt": "某個回返興奮網路受到短暫輸入。研究者降低抑制作用，其餘條件維持相同。對接下來活動的判斷，哪一個最合理？", "options": [{"text": "活動一定更精準，因為抑制只會阻止有用訊號通過。", "explanation": "抑制可以限制背景或競爭活動，因此可能幫助某些表徵更有選擇性。減少抑制不等於增加精準度；若多個候選一起被放大，區分反而可能變差。"}, {"text": "回返活動可能過度放大，但結果仍取決於連結強度與其他調節。", "explanation": "回返興奮會把活動重新送回網路；當限制減弱時，這個循環有機會產生更強或更持久的活動。結果還受連結強度、輸入、適應與其他調節影響，所以是可能性，不能僅由降低抑制推定一定失控或發作。"}, {"text": "只要抑制降低，所有真實大腦都必然立刻出現癲癇發作。", "explanation": "抑制的改變可能影響網路穩定性，但癲癇發作是更複雜的生理現象。這個簡化情境沒有提供迴路範圍、程度或其他生理條件，不能據此作出必然發作的判斷。"}, {"text": "活動不可能改變，因為抑制只在外部輸入停止後才起作用。", "explanation": "抑制可以在輸入期間被招募，也可以由網路自身活動招募。改變抑制作用因此能改變回返活動的增強與持續方式，並不只影響輸入停止之後。"}], "answer": 1, "why": "回返興奮提供放大的途徑，抑制可對這條途徑形成限制。限制減弱可能提高過度放大的風險，但是否發生、程度多大，都需要考量整個系統。"}, {"id": "m6q2", "concept": "抑制細胞的招募路徑", "prompt": "比較兩個簡化迴路：甲的上游輸入同時興奮主細胞 P 與抑制細胞 I，I 再抑制 P；乙由 P 的活動興奮 I，I 再回頭抑制 P。如何分類最準確？", "options": [{"text": "甲與乙都是前饋抑制，因為 I 都把訊號送向 P。", "explanation": "兩個迴路的抑制輸出都由 I 指向 P，這個共同點不足以分類。關鍵是 I 由上游輸入直接招募，還是由 P 自身的活動招募；乙因此具有回饋路徑。"}, {"text": "甲是回饋抑制；乙是前饋抑制，因為回到 P 就算回饋。", "explanation": "甲的 I 是由上游輸入招募，沒有以 P 的活動作為這條抑制路徑的起點。乙才形成 P 到 I 再回到 P 的循環，所以這個分類把兩者倒置了。"}, {"text": "必須先量到抑制發生的時間，才能由快慢決定甲乙的類型。", "explanation": "時序可以幫助研究迴路的效果，但快慢本身不是這兩類抑制的定義。題目已給出招募路徑，因此可以分類；不同細胞與突觸特性也可能使兩類迴路的時間範圍重疊。"}, {"text": "甲是前饋抑制；乙是回饋抑制，依據是誰招募了 I。", "explanation": "甲的同一上游輸入分支到 P 與 I，I 的作用可限制輸入引起的 P 活動，是典型前饋抑制。乙由 P 的活動招募 I，再抑制 P，形成回饋抑制；分類是沿著迴路追蹤招募關係。"}], "answer": 3, "why": "先找到抑制細胞 I 的興奮來源：上游輸入直接招募 I，對應前饋抑制；P 的活動招募 I 並回到 P，對應回饋抑制。兩者都可能降低 P 的活動，但招募路徑不同。"}], "reflection": {"id": "m6r", "prompt": "手機通知一直打斷你，但你也擔心錯過重要訊息。若要替注意力設下界線，你較想先試哪個做法？", "options": ["保留緊急聯絡人的提醒，其他通知集中查看。", "設定一段完全安靜的時間，之後再處理訊息。", "依工作與休息情境切換不同通知規則。", "先保留目前通知，記錄哪些打斷值得即時回應。"], "note": "這題不計分；界線是否增加自由，涉及需求與價值選擇。通知管理與神經抑制之間只是可供討論的比喻，神經科學沒有替你證明哪套生活規則最好；可補充你想保護什麼，以及願意承擔哪種錯過。"}}]</script>
+  <script>/* Original, qualitative teaching figures. No network requests or storage. */
+(function () {
+  'use strict';
+
+  const NOTE = '質性教學示意，數值不是生理測量；活動強弱代表群體反應／放電率，不是單一動作電位振幅。';
+  const svgStyle = 'display:block;width:100%;height:auto;font-family:inherit';
+  const clamp = (value, min, max) => Math.max(min, Math.min(max, value));
+  const svg = (label, viewBox, body) => `<svg class="figure" xmlns="http://www.w3.org/2000/svg" viewBox="${viewBox}" role="img" aria-label="${label}" style="${svgStyle}"><title>${label}</title>${body}</svg>`;
+  const note = (extra = '') => `<p class="sim-note">${NOTE}${extra ? ` ${extra}` : ''}</p>`;
+  const pairedControls = (name, label, min, max, value, step = 1, unit = '') => `<div class="demo-controls"><label class="control">${label}<input data-input="${name}" type="range" min="${min}" max="${max}" step="${step}" value="${value}" aria-label="${label}"></label><label class="control">${label}（數值${unit ? `，${unit}` : ''}）<input data-input="${name}" type="number" inputmode="numeric" min="${min}" max="${max}" step="${step}" value="${value}" aria-label="${label}數值" style="max-width:7rem"></label></div>`;
+  const output = (name, content = '') => `<div class="demo-output" data-output="${name}" aria-live="polite" aria-atomic="true">${content}</div>`;
+
+  function pair(container, name, min, max, update) {
+    const fields = Array.from(container.querySelectorAll(`[data-input="${name}"]`));
+    function apply(raw, commit) {
+      if (raw === '' || !Number.isFinite(Number(raw))) return;
+      const value = clamp(Math.round(Number(raw)), min, max);
+      fields.forEach(field => { if (field.type === 'range' || commit || Number(field.value) !== value) field.value = String(value); });
+      update(value);
+    }
+    fields.forEach(field => {
+      field.addEventListener('input', () => apply(field.value, false));
+      field.addEventListener('change', () => apply(field.value === '' ? min : field.value, true));
+    });
+    apply(fields[0]?.value ?? min, true);
+  }
+
+  function ambiguous() {
+    const profile = 'M0 0H201 Q188 38 209 69 C228 92 218 106 209 117 C208 131 221 142 239 150 Q251 158 237 167 L223 171 Q230 179 230 186 Q226 195 218 198 Q231 212 219 225 Q214 242 202 246 C190 254 191 273 178 293 L150 330 H0Z';
+    return svg('原創雙義輪廓：中央淺色區域可看作花瓶，左右深色區域可看作相向的側臉。沒有唯一規定的看法。', '0 0 600 360', `
+      <desc>左右輪廓互為鏡像；同一道邊界可以屬於中央物件，也可以屬於左右人物。看不出兩種解讀也不代表任何能力或健康狀態。</desc>
+      <rect x="0" y="0" width="600" height="360" rx="24" fill="var(--soft,#f5f1e8)"/>
+      <g transform="translate(24 15) scale(.92)" fill="var(--ink,#18312d)"><path d="${profile}"/><path d="${profile}" transform="translate(600 0) scale(-1 1)"/></g>
+      <rect x="1" y="1" width="598" height="358" rx="24" fill="none" stroke="var(--line,#d7ddd7)" stroke-width="2"/>`);
+  }
+
+  function network() {
+    const rows = [65, 125, 185, 245, 305, 365];
+    const names = ['I', 'II', 'III', 'IV', 'V', 'VI'];
+    const nodes = rows.map((y, i) => `<path d="M120 ${y + 29}H480" stroke="var(--line,#d7ddd7)" stroke-width="1"/>
+      <text x="69" y="${y + 7}" font-size="23" fill="var(--ink,#18312d)" text-anchor="middle">${names[i]}</text>
+      <circle cx="225" cy="${y}" r="13" fill="var(--soft,#f5f1e8)" stroke="var(--ink,#18312d)" stroke-width="3"/>
+      <circle cx="425" cy="${y}" r="13" fill="var(--soft,#f5f1e8)" stroke="var(--ink,#18312d)" stroke-width="3"/>`).join('');
+    return `<div class="demo-controls" role="group" aria-label="選擇顯示的連結"><label class="control"><input type="checkbox" data-link="feedforward" checked> 前饋：由輸入往後續處理</label><label class="control"><input type="checkbox" data-link="feedback" checked> 回饋：高階區域回到較早處理</label><label class="control"><input type="checkbox" data-link="lateral" checked> 側向：同層局部連結</label></div>
+      ${svg('簡化的六層皮質連結。圓形代表示意節點，箭頭表示興奮性連結，T 端表示抑制性連結。', '0 0 640 425', `
+        <defs><marker id="m1-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="context-stroke"/></marker><marker id="m1-t" viewBox="-2 -8 4 16" refX="0" refY="0" markerWidth="5" markerHeight="12" orient="auto"><path d="M0 -7V7" stroke="var(--coral,#b35746)" stroke-width="3"/></marker></defs>
+        <rect x="120" y="28" width="360" height="374" rx="16" fill="var(--soft,#f5f1e8)"/>
+        <text x="69" y="27" font-size="20" text-anchor="middle" fill="var(--muted,#516762)">層</text>
+        <g data-kind="feedforward" fill="none" stroke="var(--accent,#157d73)" stroke-width="4" marker-end="url(#m1-arrow)"><path d="M588 245H440"/><path d="M425 231V199"/><path d="M425 171V139"/><path d="M410 125Q314 102 240 125"/></g>
+        <g data-kind="feedback" fill="none" stroke="var(--blue,#476f9b)" stroke-width="4" stroke-dasharray="9 7" marker-end="url(#m1-arrow)"><path d="M553 68Q468 66 437 110"/><path d="M411 135Q347 178 240 185"/><path d="M425 292Q496 217 438 198"/></g>
+        <g data-kind="lateral" fill="none" stroke="var(--ink,#18312d)" stroke-width="4" stroke-dasharray="3 6" marker-end="url(#m1-arrow)"><path d="M240 185H410"/><path d="M410 305H240"/></g>
+        <path d="M410 245H240" fill="none" stroke="var(--coral,#b35746)" stroke-width="4" marker-end="url(#m1-t)"/>
+        ${nodes}
+        <rect x="520" y="29" width="101" height="58" rx="12" fill="var(--soft,#f5f1e8)" stroke="var(--blue,#476f9b)" stroke-width="2"/>
+        <text x="570" y="65" font-size="20" text-anchor="middle" fill="var(--ink,#18312d)">高階區</text>
+        <text x="574" y="225" font-size="20" text-anchor="middle" fill="var(--ink,#18312d)">外來輸入</text>`)}
+      <div class="legend"><span>I–VI：六個皮質層的示意位置</span><br><span>實線箭頭 → 前饋</span> <span>長虛線箭頭 ⇢ 回饋</span> <span>點線箭頭 → 側向</span> <span>T 端 ⊣ 抑制</span></div>
+      ${output('network')}
+      ${note('第 IV 層接收輸入是此處的簡化例子；真實皮質區域、細胞種類與投射層次更複雜。這些路徑不是六層依序串接的生產線。')}`;
+  }
+
+  function chair() {
+    return `${pairedControls('reveal', '線索揭露階段', 0, 3, 0)}
+      ${svg('原創椅子輪廓，從局部線條逐步補上椅腳、座面及椅背。', '0 0 480 360', `
+        <rect x="18" y="16" width="444" height="328" rx="24" fill="var(--soft,#f5f1e8)"/>
+        <path d="M68 309H411" fill="none" stroke="var(--line,#d7ddd7)" stroke-width="2"/>
+        <g fill="none" stroke="var(--ink,#18312d)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
+          <path data-chair-stage="0" d="M138 293L136 306M333 293L337 306"/>
+          <path data-chair-stage="1" d="M151 205L138 294M306 216L333 294M261 178L274 270M371 163L371 274"/>
+          <path data-chair-stage="2" d="M146 195L265 159L373 170L307 216Z"/>
+          <path data-chair-stage="3" d="M263 159V74L370 83V170M270 102L362 110M270 129L362 137"/>
+        </g>`)}
+      ${output('chair')}
+      <p class="sim-note">線索本身不等於物件名稱。局部特徵與已學會的知識共同支持辨識；現實中，同樣的線條也可能有其他解讀。</p>`;
+  }
+
+  const shapes = [
+    {name: '橫向長方形', direction: 0.15, form: 0.15, activity: [90, 10, 85, 15]},
+    {name: '直向長方形', direction: 0.85, form: 0.15, activity: [10, 90, 85, 15]},
+    {name: '橫向橢圓', direction: 0.15, form: 0.85, activity: [90, 10, 15, 85]},
+    {name: '直向橢圓', direction: 0.85, form: 0.85, activity: [10, 90, 15, 85]}
+  ];
+  function representation() {
+    const icons = shapes.map((shape, index) => {
+      const x = 70 + index * 125;
+      const mark = index === 0 ? `<rect x="${x - 39}" y="47" width="78" height="32" rx="2"/>` : index === 1 ? `<rect x="${x - 16}" y="25" width="32" height="78" rx="2"/>` : index === 2 ? `<ellipse cx="${x}" cy="63" rx="39" ry="17"/>` : `<ellipse cx="${x}" cy="63" rx="17" ry="39"/>`;
+      return `<g fill="var(--soft,#f5f1e8)" stroke="var(--ink,#18312d)" stroke-width="3">${mark}</g><text x="${x}" y="141" text-anchor="middle" fill="var(--ink,#18312d)" font-size="25">${index + 1}</text>`;
+    }).join('');
+    return `${svg('四個物件：1 橫向長方形、2 直向長方形、3 橫向橢圓、4 直向橢圓。', '0 0 515 157', icons)}
+      <div class="legend">1 橫向長方形 · 2 直向長方形 · 3 橫向橢圓 · 4 直向橢圓</div>
+      <div class="demo-controls"><label class="control">當前觀察物件<select data-object aria-label="當前觀察物件">${shapes.map((s, i) => `<option value="${i}">${i + 1} ${s.name}</option>`).join('')}</select></label></div>
+      <div style="max-width:100%;overflow-x:auto"><table style="width:100%;border-collapse:collapse;text-align:center"><caption style="text-align:left;margin:.75rem 0">共享四個特徵通道的相對反應（0–100，示意值）</caption><thead><tr><th scope="col">物件</th><th scope="col">橫向</th><th scope="col">直向</th><th scope="col">方角</th><th scope="col">曲線</th></tr></thead><tbody>${shapes.map((s, i) => `<tr data-object-row="${i}"><th scope="row">${i + 1}<span data-current-mark>${i === 0 ? '（目前）' : ''}</span></th>${s.activity.map(a => `<td style="padding:.55rem .25rem;background:rgba(21,125,115,${0.04 + a / 700})">${a}</td>`).join('')}</tr>`).join('')}</tbody></table></div>
+      ${output('objectpattern')}
+      <div class="demo-controls"><label class="control">投影後保留的資訊<select data-projection aria-label="投影後保留的資訊"><option value="direction">保留方向</option><option value="form">保留形狀</option><option value="both">保留兩者：方向與形狀</option></select></label></div>
+      <div data-projection-figure></div>
+      ${output('projection')}
+      ${note('這四個通道是為了教學自訂的特徵，並非聲稱每種特徵各由單一神經元專屬保存。')}`;
+  }
+  function projectionFigure(mode) {
+    const groups = new Map();
+    shapes.forEach((shape, index) => {
+      const x = mode === 'form' ? 0.5 : shape.direction;
+      const y = mode === 'direction' ? 0.5 : shape.form;
+      const key = `${x},${y}`;
+      if (!groups.has(key)) groups.set(key, {x, y, numbers: []});
+      groups.get(key).numbers.push(index + 1);
+    });
+    const points = Array.from(groups.values()).map(p => `<g><circle cx="${68 + p.x * 304}" cy="${252 - p.y * 215}" r="${p.numbers.length > 1 ? 31 : 23}" fill="var(--soft,#f5f1e8)" stroke="var(--accent,#157d73)" stroke-width="3"/><text x="${68 + p.x * 304}" y="${260 - p.y * 215}" text-anchor="middle" font-size="23" fill="var(--ink,#18312d)" font-weight="700">${p.numbers.join('·')}</text></g>`).join('');
+    return svg('特徵投影圖；物件編號重合表示投影後無法憑保留的資訊分辨。', '0 0 440 330', `
+      <rect x="48" y="21" width="349" height="255" rx="16" fill="var(--soft,#f5f1e8)"/>
+      <path d="M68 36V252H374" fill="none" stroke="var(--muted,#516762)" stroke-width="2"/>
+      <path d="M68 144H373M220 37V252" fill="none" stroke="var(--line,#d7ddd7)" stroke-dasharray="5 6"/>
+      ${points}
+      <text x="75" y="304" font-size="22" fill="var(--ink,#18312d)">橫向</text><text x="315" y="304" font-size="22" fill="var(--ink,#18312d)">直向</text>
+      <text x="10" y="64" font-size="22" fill="var(--ink,#18312d)" writing-mode="vertical-rl">曲線</text><text x="10" y="210" font-size="22" fill="var(--ink,#18312d)" writing-mode="vertical-rl">方角</text>`);
+  }
+
+  const cones = [
+    {name: 'S', centre: 440, width: 38, color: 'var(--accent,#157d73)', dash: ''},
+    {name: 'M', centre: 540, width: 48, color: 'var(--blue,#476f9b)', dash: '12 7'},
+    {name: 'L', centre: 570, width: 55, color: 'var(--coral,#b35746)', dash: '3 7'}
+  ];
+  const sensitivity = (wavelength, cone) => 100 * Math.exp(-0.5 * ((wavelength - cone.centre) / cone.width) ** 2);
+  function coneDemo() {
+    const curves = cones.map(cone => {
+      const path = Array.from({length: 151}, (_, i) => {
+        const wavelength = 400 + i * 2;
+        return `${i === 0 ? 'M' : 'L'}${(50 + (wavelength - 400) / 300 * 520).toFixed(2)} ${(185 - sensitivity(wavelength, cone) * 1.45).toFixed(2)}`;
+      }).join(' ');
+      return `<path d="${path}" fill="none" stroke="${cone.color}" stroke-width="4"${cone.dash ? ` stroke-dasharray="${cone.dash}"` : ''}/><circle data-cone-dot="${cone.name}" r="7" fill="${cone.color}" stroke="var(--soft,#f5f1e8)" stroke-width="2"/>`;
+    }).join('');
+    return `${pairedControls('wavelength', '光的波長', 400, 700, 550, 1, 'nm')}
+      ${svg('S、M、L 三個重疊的質性敏感度曲線。S 為實線，M 為長虛線，L 為點線。', '0 0 620 258', `
+        <rect x="22" y="16" width="576" height="219" rx="20" fill="var(--soft,#f5f1e8)"/>
+        <path d="M50 28V185H570" fill="none" stroke="var(--muted,#516762)" stroke-width="2"/>
+        ${curves}
+        <path data-wavelength-line d="M310 28V185" fill="none" stroke="var(--ink,#18312d)" stroke-width="2" stroke-dasharray="5 6"/>
+        <text x="120" y="32" font-size="22" fill="var(--ink,#18312d)">S</text><text x="281" y="32" font-size="22" fill="var(--ink,#18312d)">M</text><text x="365" y="32" font-size="22" fill="var(--ink,#18312d)">L</text>
+        <text x="50" y="216" text-anchor="middle" font-size="21" fill="var(--ink,#18312d)">400</text><text x="223" y="216" text-anchor="middle" font-size="21" fill="var(--ink,#18312d)">500</text><text x="397" y="216" text-anchor="middle" font-size="21" fill="var(--ink,#18312d)">600</text><text x="570" y="216" text-anchor="middle" font-size="21" fill="var(--ink,#18312d)">700</text>`)}
+      <div class="legend">橫軸：波長（nm） · 縱軸：相對敏感度<br>S：實線 ｜ M：長虛線 ｜ L：點線</div>
+      ${output('cones')}
+      <p class="sim-note">質性教學示意，數值不是生理測量。曲線使用自訂高斯函數，只呈現三種通道的相對敏感度彼此重疊；圓錐細胞本身產生分級受體電位，此處的相對反應不是它們的動作電位振幅或放電率。S／M／L 是短／中／長波敏感型，不是純粹的藍／綠／紅開關；此圖不模擬完整色覺或螢幕色彩。</p>`;
+  }
+
+  const basinPoint = physicalX => {
+    const x = 300 + physicalX * 148;
+    const y = 185 - Math.min(2.5, (physicalX * physicalX - 1) ** 2) * 67;
+    return {x, y};
+  };
+  function attractor() {
+    const potentialPath = Array.from({length: 141}, (_, i) => {
+      const p = basinPoint(-1.5 + i * 3 / 140);
+      return `${i === 0 ? 'M' : 'L'}${p.x.toFixed(2)} ${p.y.toFixed(2)}`;
+    }).join(' ');
+    return `<div class="legend">同一組線條，試著把不同的面當作前面：</div>
+      ${svg('原創 Necker 立方體。兩個平行正方形以對應頂點相連；線條沒有指定哪一面在前。', '0 0 360 280', `
+        <rect x="18" y="12" width="324" height="256" rx="24" fill="var(--soft,#f5f1e8)"/>
+        <g fill="none" stroke="var(--ink,#18312d)" stroke-width="4" stroke-linejoin="round"><path data-cube-face="lower" d="M78 96H218V236H78Z"/><path data-cube-face="upper" d="M138 36H278V176H138Z"/><path d="M78 96L138 36M218 96L278 36M218 236L278 176M78 236L138 176"/></g>`)}
+      <div class="demo-controls" role="group" aria-label="立方體的主觀解讀"><button type="button" class="btn btn-secondary" data-cube-choice="lower" aria-pressed="false">左下方的面在前</button><button type="button" class="btn btn-secondary" data-cube-choice="upper" aria-pressed="false">右上方的面在前</button><button type="button" class="btn btn-secondary" data-cube-choice="none" aria-pressed="true">保留雙義輪廓</button></div>
+      ${output('cube', '此處沒有計分：線條允許多種解讀。選擇只加強你正在注意的面，不會使它成為客觀答案。')}
+      <p class="sim-note">期待、注意與高階回饋可以影響目前解讀。這幅圖不能用來診斷任何個人的神經狀態。</p>
+      ${pairedControls('perturbation', '施加擾動（負值向左、正值向右）', -100, 100, 20)}
+      ${svg('雙吸引子示意：兩個谷底 A 與 B 是穩定網路狀態；圓點代表目前狀態，空心圓代表待施加擾動的位置。', '0 0 600 256', `
+        <rect x="24" y="15" width="552" height="218" rx="22" fill="var(--soft,#f5f1e8)"/>
+        <path d="${potentialPath}" fill="none" stroke="var(--ink,#18312d)" stroke-width="4"/>
+        <path d="M300 37V202" stroke="var(--line,#d7ddd7)" stroke-width="2" stroke-dasharray="5 6"/>
+        <circle data-attractor-preview cx="200" cy="150" r="10" fill="none" stroke="var(--accent,#157d73)" stroke-width="3" stroke-dasharray="3 3"/>
+        <circle data-attractor-ball cx="152" cy="185" r="11" fill="var(--coral,#b35746)" stroke="var(--soft,#f5f1e8)" stroke-width="3"/>
+        <text x="152" y="220" text-anchor="middle" font-size="23" fill="var(--ink,#18312d)">A</text><text x="448" y="220" text-anchor="middle" font-size="23" fill="var(--ink,#18312d)">B</text>`)}
+      <div class="legend">實心圓：目前狀態 · 空心圓：擾動起點 · 谷底：穩定狀態<br>橫向位置代表示意網路狀態；曲線是教學用「穩定性地形」。</div>
+      <div class="demo-controls"><button type="button" class="btn" data-apply-perturbation>施加一次擾動</button><button type="button" class="btn btn-secondary" data-reset-attractor>回到 A，擾動設為 20</button></div>
+      ${output('attractor')}
+      ${note('只有按下按鈕才播放一次移動；已減少動態效果時直接更新。小擾動可能回到原狀態，跨過分界則可能到另一狀態。穩定與反覆出現不等於真實或正確。')}`;
+  }
+
+  function inhibition() {
+    return `${pairedControls('inhibition', '抑制強度', 0, 100, 45)}
+      <div data-population-figure></div>
+      ${output('inhibition')}
+      <div class="demo-controls"><label class="control">抑制介神經元的招募路徑<select data-circuit aria-label="抑制介神經元的招募路徑"><option value="feedforward">前饋抑制</option><option value="feedback">回饋抑制</option></select></label></div>
+      <div data-circuit-figure></div>
+      <div class="legend">X：外來傳入 · P：主細胞 · I：抑制性介神經元<br>箭頭 →：興奮性連結 · T 端 ⊣：抑制性連結</div>
+      ${output('circuit')}
+      ${note('條狀圖只展示「抑制可讓反應更有選擇性」的概念；不同招募路徑不會在此模型中自動改變反應數值。真實作用還取決於時序、連結與細胞性質。')}`;
+  }
+  function populationFigure(values) {
+    return svg(`六個示意群體的相對反應：${values.map((v, i) => `P${i + 1} ${v}`).join('、')}。`, '0 0 600 288', `
+      <rect x="22" y="13" width="556" height="259" rx="22" fill="var(--soft,#f5f1e8)"/>
+      ${values.map((value, index) => {
+        const y = 28 + index * 40;
+        return `<text x="43" y="${y + 21}" font-size="22" fill="var(--ink,#18312d)">P${index + 1}</text><rect x="91" y="${y}" width="402" height="27" rx="8" fill="var(--line,#d7ddd7)"/><rect x="91" y="${y}" width="${value / 100 * 402}" height="27" rx="8" fill="${index === 0 ? 'var(--accent,#157d73)' : 'var(--blue,#476f9b)'}"/><text x="521" y="${y + 21}" font-size="22" fill="var(--ink,#18312d)">${value}</text>`;
+      }).join('')}`);
+  }
+  function circuitFigure(kind) {
+    const recruitment = kind === 'feedforward' ? '<path d="M78 139Q114 226 195 232"/>' : '<path d="M395 134Q461 264 256 242"/>';
+    return svg(kind === 'feedforward' ? '前饋抑制：外來傳入 X 同時興奮主細胞 P 與抑制性介神經元 I；I 再抑制 P。' : '回饋抑制：外來傳入 X 興奮主細胞 P；P 興奮抑制性介神經元 I，I 再抑制 P。', '0 0 480 300', `
+      <defs><marker id="m6-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="context-stroke"/></marker><marker id="m6-t" viewBox="-2 -8 4 16" refX="0" refY="0" markerWidth="5" markerHeight="12" orient="auto"><path d="M0 -7V7" stroke="var(--coral,#b35746)" stroke-width="3"/></marker></defs>
+      <rect x="14" y="16" width="452" height="269" rx="22" fill="var(--soft,#f5f1e8)"/>
+      <g fill="none" stroke="var(--accent,#157d73)" stroke-width="4" marker-end="url(#m6-arrow)"><path d="M103 110H347"/>${recruitment}</g>
+      <path d="M246 209L356 137" fill="none" stroke="var(--coral,#b35746)" stroke-width="4" marker-end="url(#m6-t)"/>
+      <g fill="var(--soft,#f5f1e8)" stroke="var(--ink,#18312d)" stroke-width="3"><circle cx="70" cy="110" r="32"/><circle cx="380" cy="110" r="32"/><circle cx="225" cy="232" r="32"/></g>
+      <g font-size="29" font-weight="700" fill="var(--ink,#18312d)" text-anchor="middle"><text x="70" y="120">X</text><text x="380" y="120">P</text><text x="225" y="242">I</text></g>`);
+  }
+
+  function render(id) {
+    const renderers = {1: network, 2: chair, 3: representation, 4: coneDemo, 5: attractor, 6: inhibition};
+    return renderers[Number(id)]?.() ?? '';
+  }
+  function bind(id, container) {
+    if (!container || !container.querySelector) return;
+    const put = (name, message) => { const target = container.querySelector(`[data-output="${name}"]`); if (target) target.innerHTML = message; };
+    switch (Number(id)) {
+      case 1: {
+        const update = () => {
+          const visible = [];
+          const names = {feedforward: '前饋', feedback: '回饋', lateral: '側向'};
+          container.querySelectorAll('[data-link]').forEach(control => {
+            const group = container.querySelector(`[data-kind="${control.dataset.link}"]`);
+            if (group) group.style.display = control.checked ? '' : 'none';
+            if (control.checked) visible.push(names[control.dataset.link]);
+          });
+          put('network', `<strong>目前顯示：${visible.length ? visible.join('、') : '三類興奮性路徑皆隱藏'}。</strong> T 端抑制連結仍可見。節點數量相同，但保留不同連結會改變資訊可流經的路徑；這張圖只顯示結構，沒有計算實際放電活動。`);
+        };
+        container.querySelectorAll('[data-link]').forEach(control => control.addEventListener('change', update));
+        update();
+        break;
+      }
+      case 2: {
+        const stages = ['先看到兩小段線，還不足以決定物件。', '出現數條支撐線；可以形成猜想，但仍有多種可能。', '座面與支撐線整合，椅子的解讀開始合理。', '椅背、座面與椅腳共同支持「椅子」的解讀。'];
+        pair(container, 'reveal', 0, 3, value => {
+          container.querySelectorAll('[data-chair-stage]').forEach(part => { part.style.display = Number(part.dataset.chairStage) <= value ? '' : 'none'; });
+          put('chair', `<strong>階段 ${value}／3：</strong>${stages[value]} 你辨識的是一組特徵的關係，而不只是單獨一筆線。`);
+        });
+        break;
+      }
+      case 3: {
+        const objectSelect = container.querySelector('[data-object]');
+        const updateObject = () => {
+          const index = clamp(Number(objectSelect.value), 0, shapes.length - 1);
+          const shape = shapes[index];
+          container.querySelectorAll('[data-object-row]').forEach(row => {
+            const selected = Number(row.dataset.objectRow) === index;
+            row.style.outline = selected ? '2px solid var(--accent,#157d73)' : '';
+            row.style.outlineOffset = selected ? '-2px' : '';
+            row.setAttribute('aria-current', String(selected));
+            row.querySelector('[data-current-mark]').textContent = selected ? '（目前）' : '';
+          });
+          put('objectpattern', `<strong>目前觀察 ${index + 1} ${shape.name}：</strong>橫向 ${shape.activity[0]}、直向 ${shape.activity[1]}、方角 ${shape.activity[2]}、曲線 ${shape.activity[3]}（0–100，示意值）。四種物件使用同一組通道；區別來自共同活動的組合。表格保留其他物件供比對。`);
+        };
+        objectSelect.addEventListener('change', updateObject);
+        updateObject();
+        const select = container.querySelector('[data-projection]');
+        const update = () => {
+          const mode = select.value;
+          container.querySelector('[data-projection-figure]').innerHTML = projectionFigure(mode);
+          const explanation = mode === 'direction' ? '保留方向：1 與 3 重合，2 與 4 重合。長方形／橢圓差異被丟掉，無法從這個投影還原。' : mode === 'form' ? '保留形狀：1 與 2 重合，3 與 4 重合。橫向／直向差異被丟掉，無法從這個投影還原。' : '保留方向與形狀：四個物件仍可在這兩個特徵軸上區分。其他特徵，例如大小、材質與位置，本來就沒有放進模型。';
+          const coordinates = shapes.map((shape, index) => `${index + 1}：(${mode === 'form' ? '0.50' : shape.direction.toFixed(2)}, ${mode === 'direction' ? '0.50' : shape.form.toFixed(2)})`).join('；');
+          put('projection', `<strong>${explanation}</strong><p>示意座標（方向，形狀）：${coordinates}。固定在 0.50 的軸表示該差異被移除，不表示物件真的具有「中間」特徵。</p>`);
+        };
+        select.addEventListener('change', update);
+        update();
+        break;
+      }
+      case 4: {
+        pair(container, 'wavelength', 400, 700, wavelength => {
+          const x = 50 + (wavelength - 400) / 300 * 520;
+          const line = container.querySelector('[data-wavelength-line]');
+          line.setAttribute('d', `M${x} 28V185`);
+          const values = cones.map(cone => {
+            const response = Math.round(sensitivity(wavelength, cone));
+            const point = container.querySelector(`[data-cone-dot="${cone.name}"]`);
+            point.setAttribute('cx', x);
+            point.setAttribute('cy', 185 - sensitivity(wavelength, cone) * 1.45);
+            return `${cone.name} = ${response}`;
+          });
+          put('cones', `<strong>${wavelength} nm：</strong>${values.join('，')}（相對反應 0–100）。同一波長通常引起多個通道共同反應；可用的是反應組合，而非只問某一通道有沒有亮起。`);
+        });
+        break;
+      }
+      case 5: {
+        container.querySelectorAll('[data-cube-choice]').forEach(button => button.addEventListener('click', () => {
+          const choice = button.dataset.cubeChoice;
+          container.querySelectorAll('[data-cube-choice]').forEach(b => b.setAttribute('aria-pressed', String(b === button)));
+          container.querySelectorAll('[data-cube-face]').forEach(face => {
+            face.setAttribute('stroke-width', face.dataset.cubeFace === choice ? '7' : '4');
+            face.setAttribute('stroke', face.dataset.cubeFace === choice ? 'var(--accent,#157d73)' : 'var(--ink,#18312d)');
+          });
+          put('cube', choice === 'none' ? '恢復等粗線條，兩種解讀都可成立。這項觀察不計分。' : `你現在注意${choice === 'lower' ? '左下方' : '右上方'}的面；較粗輪廓只是注意提示。期待或回饋可以使某一解讀更容易浮現，但這不是唯一正確答案。`);
+        }));
+        let current = -1;
+        let perturbation = 20;
+        let frame = 0;
+        const ball = container.querySelector('[data-attractor-ball]');
+        const preview = container.querySelector('[data-attractor-preview]');
+        const position = (element, value) => {
+          const p = basinPoint(value);
+          element.setAttribute('cx', p.x);
+          element.setAttribute('cy', p.y);
+        };
+        const updatePreview = () => position(preview, clamp(current + perturbation / 50, -1.5, 1.5));
+        const describe = () => {
+          const candidate = current + perturbation / 50;
+          const expected = candidate === 0 ? current : candidate < 0 ? -1 : 1;
+          put('attractor', `<strong>目前穩定在 ${current < 0 ? 'A' : 'B'}；待施加擾動 ${perturbation > 0 ? '+' : ''}${perturbation}。</strong> ${candidate === 0 ? '恰在分界上，這個簡化模型約定返回目前狀態；真實網路還可能受微小雜訊影響。' : expected === current ? '預期仍落在同一谷底；擾動之後會返回原穩定狀態。' : '預期跨過分界，到另一個谷底。'} 穩定狀態可以是持續的活動模式或解讀，不等於事實判定。`);
+        };
+        pair(container, 'perturbation', -100, 100, value => { perturbation = value; updatePreview(); describe(); });
+        container.querySelector('[data-apply-perturbation]').addEventListener('click', () => {
+          if (frame) window.cancelAnimationFrame(frame);
+          const start = clamp(current + perturbation / 50, -1.5, 1.5);
+          const prior = current;
+          current = start === 0 ? current : start < 0 ? -1 : 1;
+          const target = current;
+          updatePreview();
+          put('attractor', `<strong>已施加 ${perturbation > 0 ? '+' : ''}${perturbation}：${prior < 0 ? 'A' : 'B'} ${prior === target ? '返回' : '轉到'} ${target < 0 ? 'A' : 'B'}。</strong> ${prior === target ? '擾動未改變最後的穩定狀態。' : '擾動讓狀態越過分界，落入另一個吸引子的範圍。'} 此次結果只來自教學規則，並非對個人知覺的測量。`);
+          if (window.matchMedia?.('(prefers-reduced-motion: reduce)').matches) { position(ball, target); return; }
+          const began = performance.now();
+          const animate = time => {
+            const progress = Math.min(1, (time - began) / 620);
+            const ease = 1 - (1 - progress) ** 3;
+            position(ball, start + (target - start) * ease);
+            if (progress < 1 && container.isConnected) frame = window.requestAnimationFrame(animate); else { frame = 0; position(ball, target); }
+          };
+          position(ball, start);
+          frame = window.requestAnimationFrame(animate);
+        });
+        container.querySelector('[data-reset-attractor]').addEventListener('click', () => {
+          if (frame) window.cancelAnimationFrame(frame);
+          frame = 0;
+          current = -1;
+          perturbation = 20;
+          container.querySelectorAll('[data-input="perturbation"]').forEach(field => { field.value = '20'; });
+          position(ball, current);
+          updatePreview();
+          describe();
+        });
+        position(ball, current);
+        break;
+      }
+      case 6: {
+        pair(container, 'inhibition', 0, 100, strength => {
+          const baseline = [98, 83, 76, 70, 63, 59];
+          const slopes = [0.1, 0.65, 0.7, 0.65, 0.58, 0.54];
+          const values = baseline.map((base, index) => Math.max(0, Math.round(base - strength * slopes[index])));
+          container.querySelector('[data-population-figure]').innerHTML = populationFigure(values);
+          put('inhibition', `<strong>抑制強度 ${strength}：${values.map((v, i) => `P${i + 1} = ${v}`).join('，')}。</strong> ${strength === 0 ? '此截面中多個群體都有較強反應。若迴路還有反覆興奮，缺乏適當抑制可能造成持續放大；這裡沒有模擬時間或必然失控。' : strength < 40 ? '目前多個群體仍保有明顯反應。' : '被保留的優勢反應與其他反應差距加大，呈現較稀疏的模式。'} 抑制不只是關閉活動，也參與選擇與時序控制。`);
+        });
+        const select = container.querySelector('[data-circuit]');
+        const update = () => {
+          const kind = select.value;
+          container.querySelector('[data-circuit-figure]').innerHTML = circuitFigure(kind);
+          put('circuit', kind === 'feedforward' ? '<strong>前饋抑制：X → P；同時 X → I ⊣ P。</strong> 介神經元由外來傳入招募，能隨輸入限制主細胞的反應。區分依據是誰招募 I，不是抑制數值有多大。' : '<strong>回饋抑制：X → P → I ⊣ P。</strong> 主細胞活動招募介神經元，抑制再返回主細胞。名稱中的「回饋」描述這段迴路，不表示此處正在模擬高階認知回饋。');
+        };
+        select.addEventListener('change', update);
+        update();
+        break;
+      }
+      default: break;
+    }
+  }
+
+  window.LessonDiagrams = Object.freeze({render, bind, ambiguous});
+})();
+</script>
+  <script>'use strict';
+(() => {
+  const modules = JSON.parse(document.getElementById('lesson-data').textContent);
+  const STORAGE_KEY = 'networks-lesson-v1';
+  const main = document.getElementById('main');
+  const nav = document.getElementById('course-nav');
+  const fresh = () => ({version:1, answers:{}, reflections:{}, perception:{}});
+  let state = fresh(), storageOK = true;
+  const escape = (v) => String(v ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const letters = ['A','B','C','D'];
+  const perceptionOptions = ['中央像一只花瓶','兩側像相對的側臉','兩種解讀都能切換','目前沒有明確解讀'];
+  try {
+    const stored = JSON.parse(localStorage.getItem(STORAGE_KEY) || 'null');
+    if (stored && stored.version === 1 && stored.answers && stored.reflections && stored.perception) {
+      for (const m of modules) {
+        for (const q of m.questions) {
+          const old = stored.answers[q.id];
+          if (old && Array.isArray(old.attempts)) {
+            const valid = old.attempts.filter(a => Number.isInteger(a.choice) && a.choice >= 0 && a.choice < 4 && Number.isFinite(a.confidence) && a.confidence >= 0 && a.confidence <= 100).map(a => ({choice:a.choice, confidence:a.confidence, correct:a.choice === q.answer}));
+            if (valid.length) state.answers[q.id] = {attempts:valid};
+          }
+        }
+        const r = stored.reflections[m.reflection.id];
+        if (r && (r.choice === null || (Number.isInteger(r.choice) && r.choice >= 0 && r.choice < 4))) state.reflections[m.reflection.id] = {choice:r.choice, reason:String(r.reason || '').slice(0,1200)};
+      }
+      for (const stage of ['start','end']) {
+        const p=stored.perception[stage];
+        if (p && Number.isInteger(p.choice) && p.choice >= 0 && p.choice < 4 && Number.isFinite(p.confidence) && p.confidence >= 0 && p.confidence <= 100) state.perception[stage]={choice:p.choice,confidence:p.confidence};
+      }
+    }
+  } catch { storageOK = false; }
+  function save() {
+    try { localStorage.setItem(STORAGE_KEY,JSON.stringify(state)); }
+    catch { storageOK=false; }
+    document.querySelectorAll('.storage-warning').forEach(el => { el.hidden=storageOK; });
+    updateProgress();
+  }
+  function announce(text) { document.getElementById('announcer').textContent=text; }
+  function answeredCount() { return Object.keys(state.answers).length; }
+  function firstScore() { return Object.values(state.answers).filter(a=>a.attempts[0].correct).length; }
+  function updateProgress() {
+    const count=answeredCount();
+    document.getElementById('progress').value=count;
+    document.getElementById('progress').textContent=`${count} / 12`;
+    document.getElementById('progress-text').textContent=`${count} / 12`;
+    document.querySelectorAll('[data-module-progress]').forEach(el=>{
+      const m=modules.find(m=>m.id === +el.dataset.moduleProgress);
+      const done=m.questions.filter(q=>state.answers[q.id]).length;
+      el.textContent=done===2?'✓':'';
+      el.setAttribute('aria-label',`${done} 題已作答，共 2 題`);
+    });
+  }
+  function navRender(location) {
+    nav.innerHTML=[['intro','序','先看一張圖'],...modules.map(m=>[`module-${m.id}`,String(m.id).padStart(2,'0'),['連結與湧現','特徵與辨識','分散與降維','粗略編碼','回返與吸引子','抑制與競爭'][m.id-1]]),['summary','終','回到同一張圖']].map(([id,num,title])=>`<a class="nav-item" href="#${id}" ${id===location?'aria-current="page"':''}><span class="nav-num">${num}</span><span>${title}</span>${id.startsWith('module-')?`<span class="nav-check" data-module-progress="${id.split('-')[1]}"></span>`:''}</a>`).join('');
+    updateProgress();
+  }
+  function confidence(id,value=50,label='提交前，你有多大把握？') {
+    return `<div class="confidence"><label for="${id}-confidence">${label}</label><input type="range" id="${id}-confidence" min="0" max="100" step="1" value="${value}"><label class="sr-only" for="${id}-confidence-number">把握度百分比，0 到 100</label><input type="number" id="${id}-confidence-number" min="0" max="100" step="1" value="${value}"><span>%</span></div>`;
+  }
+  function bindConfidence(id) {
+    const range=document.getElementById(`${id}-confidence`), number=document.getElementById(`${id}-confidence-number`);
+    const sync=(from,to)=>{
+      if(from.value==='')return;
+      const value=Math.max(0,Math.min(100,Number(from.value)));
+      if(Number.isFinite(value)){from.value=value;to.value=value;}
+    };
+    range.addEventListener('input',()=>sync(range,number));
+    number.addEventListener('input',()=>sync(number,range));
+    number.addEventListener('blur',()=>{if(number.value===''){number.value=50;range.value=50;}});
+  }
+  function options(id,items,selected,disabled=false) {
+    return `<div class="options">${items.map((text,i)=>`<label class="option"><input type="radio" name="${id}" value="${i}" ${selected===i?'checked':''} ${disabled?'disabled':''}><span class="option-letter">${letters[i]}</span><span class="option-text">${escape(text)}</span></label>`).join('')}</div>`;
+  }
+  function perception(stage) {
+    const p=state.perception[stage];
+    const id=`perception-${stage}`;
+    return `<div class="perception-form" data-stage="${stage}"><fieldset><legend class="q-prompt">${stage==='start'?'你現在最容易看見什麼？':'再次看這張圖，你現在最容易看見什麼？'}</legend>${options(id,perceptionOptions,p?.choice)}${confidence(id,p?.confidence??50,'這個解讀有多清楚？')}</fieldset><p class="validation" role="alert" hidden>請先選擇一個解讀。</p><div class="action-row"><button type="button" class="btn perception-submit">${p?'更新觀察':'留下這次觀察'}</button><span class="small-note">不計分，沒有標準答案。</span></div><p class="saved-label perception-status" role="status">${p?'已保存這次觀察。':''}</p></div>`;
+  }
+  function bindPerception(stage) {
+    const id=`perception-${stage}`,wrap=document.querySelector(`[data-stage="${stage}"]`);
+    bindConfidence(id);
+    wrap.querySelector('.perception-submit').addEventListener('click',()=>{
+      const selected=wrap.querySelector('input[type=radio]:checked');
+      if(!selected){wrap.querySelector('.validation').hidden=false;return;}
+      wrap.querySelector('.validation').hidden=true;
+      state.perception[stage]={choice:+selected.value,confidence:+document.getElementById(`${id}-confidence-number`).value};
+      save();wrap.querySelector('.perception-status').textContent='已保存這次觀察。';wrap.querySelector('.perception-submit').textContent='更新觀察';
+      if(stage==='end')renderComparison();
+    });
+  }
+  function privacy() {
+    return `<div class="privacy"><strong>學習紀錄只留在這個瀏覽器。</strong><p>教材會保存科學題的第一次回答、重試與把握度，以及你選填的反思、前後視覺觀察。不需要姓名或帳號，沒有分析追蹤，也不會傳送作答資料。可隨時用頁面上方「清除紀錄」刪除。換瀏覽器、私密模式或清除網站資料後，紀錄可能不會保留。</p><p class="storage-warning" ${storageOK?'hidden':''}>這個瀏覽器目前無法保存紀錄；你仍可在本次開啟期間使用教材。</p></div>`;
+  }
+  function intro() {
+    main.innerHTML=`<div class="page-head"><div><span class="eyebrow">PRELUDE · 從一個不確定的瞬間開始</span><h2>同一張圖，<br>一定只有一個世界嗎？</h2><p class="lead">先看幾秒鐘，留下你的解讀。接下來六個單元，會把這個小小的知覺經驗，拆成神經網路可以討論的問題。</p></div><span class="chapter-index" aria-hidden="true">00</span></div><div class="intro-layout"><div><div class="intro-visual">${window.LessonDiagrams.ambiguous()}<div class="figure-caption">原創圖地兩可示意。相同輪廓，可形成不同的圖形與背景關係。</div></div></div><div>${perception('start')}</div></div><div class="callout">「我看見了」不只是訊號抵達大腦。它也牽涉哪些特徵被整合、哪些解讀被支持，以及哪些活動受到抑制。</div><div class="section-title"><span>兩種問題，兩種閱讀方式</span><div class="line"></div></div><div class="concept-grid"><div class="concept"><h3><span class="pill science">科學測驗 · 12 題</span></h3><p>以機制與證據判斷。每題四個選項都有解析，首次作答與重試分別保留。</p></div><div class="concept"><h3><span class="pill reflect">生活反思 · 6 題</span></h3><p>探索你重視什麼，不計分。神經機制提供思考材料，不替價值選擇下結論。</p></div><div class="concept"><h3><span class="pill">動手探索 · 6 組</span></h3><p>改變連結、特徵或抑制，觀察概念如何改變。數值是教學示意，不是生理測量。</p></div></div>${privacy()}<div class="action-row"><a class="btn" href="#module-1">進入單元 01</a><a class="btn btn-secondary" href="#summary">查看我的回顧</a><span class="small-note">可自由跳讀與回訪。</span></div>`;
+    bindPerception('start');
+  }
+  function feedback(q,m) {
+    const a=state.answers[q.id];if(!a)return '';
+    const first=a.attempts[0],last=a.attempts.at(-1);
+    const headline=last.correct?'這次回答符合這個機制。':'這次回答需要調整一個關鍵假設。';
+    return `<div class="feedback ${last.correct?'':'wrong'}" role="status"><h4>${headline}</h4><p>${escape(q.why)}</p><div class="answer-history">初答：${letters[first.choice]} · 把握度 ${first.confidence}% · ${first.correct?'答對':'待修正'}${a.attempts.length>1?`｜重試 ${a.attempts.length-1} 次；最近一次 ${letters[last.choice]} · ${last.confidence}%`:''}。初答紀錄不會被重試覆蓋。</div><details class="explanations"><summary>查看四個選項的完整解析</summary>${q.options.map((o,i)=>`<div class="explanation ${i===q.answer?'correct':''}"><strong>${letters[i]} · ${i===q.answer?'正解':'為何不合適'}：${escape(o.text)}</strong><p>${escape(o.explanation)}</p></div>`).join('')}</details><div class="source-note">對應課堂投影片：《Networks》，第 ${escape(m.pages)} 頁。</div></div>`;
+  }
+  function question(q,m,i) {
+    const a=state.answers[q.id],last=a?.attempts.at(-1);
+    return `<article class="question" id="${q.id}" data-question="${q.id}"><div class="q-meta"><span class="pill science">科學題 ${i+1} / 2</span><span>${escape(q.concept)}</span></div><fieldset><legend class="q-prompt">${escape(q.prompt)}</legend>${options(q.id,q.options.map(o=>o.text),last?.choice,!!a)}<div class="answer-controls" ${a?'hidden':''}>${confidence(q.id,50)}<p class="validation" role="alert" hidden>請選擇一個答案，再提交。</p><div class="action-row"><button class="btn question-submit" type="button">提交回答</button><span class="small-note">先想一想，再看解析。</span></div></div></fieldset><div class="feedback-host">${feedback(q,m)}</div><div class="action-row retry-controls" ${a?'':'hidden'}><button class="btn btn-secondary question-retry" type="button">重新推理一次</button></div></article>`;
+  }
+  function reflection(r) {
+    const old=state.reflections[r.id];
+    return `<section class="reflection" id="${r.id}"><span class="pill reflect">生活與哲學反思 · 不計分</span><h3>${escape(r.prompt)}</h3><p class="reflection-note">${escape(r.note)}</p><fieldset><legend class="sr-only">${escape(r.prompt)}</legend>${options(r.id,r.options,old?.choice)}</fieldset><label class="reason-label" for="${r.id}-reason">願意的話，留下你的理由 <span class="small-note">（選填，最多 1200 字）</span></label><textarea id="${r.id}-reason" maxlength="1200" placeholder="也可以不選、不寫。">${escape(old?.reason||'')}</textarea><p class="saved-label reflection-status" role="status">${old?'反思已保存在本機。':'不需要標準答案。這個選擇不影響科學測驗。'}</p></section>`;
+  }
+  function bindQuestion(q,m) {
+    const wrap=document.getElementById(q.id),controls=wrap.querySelector('.answer-controls');
+    bindConfidence(q.id);
+    wrap.querySelector('.question-submit').addEventListener('click',()=>{
+      const selected=wrap.querySelector('input[type=radio]:checked');
+      if(!selected){wrap.querySelector('.validation').hidden=false;return;}
+      wrap.querySelector('.validation').hidden=true;
+      const conf=+document.getElementById(`${q.id}-confidence-number`).value;
+      if(!state.answers[q.id])state.answers[q.id]={attempts:[]};
+      state.answers[q.id].attempts.push({choice:+selected.value,confidence:conf,correct:+selected.value===q.answer});
+      save();
+      wrap.querySelectorAll('input[type=radio]').forEach(el=>el.disabled=true);controls.hidden=true;
+      wrap.querySelector('.feedback-host').innerHTML=feedback(q,m);
+      wrap.querySelector('.retry-controls').hidden=false;
+      announce(`已記錄回答。${+selected.value===q.answer?'回答正確。':'請閱讀解析，修正推理。'}`);
+    });
+    wrap.querySelector('.question-retry').addEventListener('click',()=>{
+      wrap.querySelectorAll('input[type=radio]').forEach(el=>{el.disabled=false;el.checked=false;});
+      controls.hidden=false;wrap.querySelector('.retry-controls').hidden=true;
+      const last=state.answers[q.id].attempts.at(-1);
+      document.getElementById(`${q.id}-confidence`).value=last.confidence;
+      document.getElementById(`${q.id}-confidence-number`).value=last.confidence;
+      wrap.querySelector('input[type=radio]').focus();
+      announce('可以重新推理。第一次回答仍會保留。');
+    });
+  }
+  function bindReflection(r) {
+    const wrap=document.getElementById(r.id),reason=document.getElementById(`${r.id}-reason`);
+    const update=()=>{
+      const selected=wrap.querySelector('input[type=radio]:checked');
+      state.reflections[r.id]={choice:selected?+selected.value:null,reason:reason.value};save();
+      wrap.querySelector('.reflection-status').textContent=storageOK?'反思已保存在本機。不影響科學分數。':'已保留在本次開啟期間。';
+    };
+    wrap.querySelectorAll('input[type=radio]').forEach(el=>el.addEventListener('change',update));
+    reason.addEventListener('input',update);
+  }
+  function modulePage(m) {
+    const demoTitles=['換一種連結，換一種可能','從片段到物件','一群單元，四個圖形','重疊的敏感度，不同的反應圖樣','穩定狀態，與改變解讀的擾動','抑制如何讓反應分出高低'];
+    main.innerHTML=`<div class="page-head"><div><span class="eyebrow">${escape(m.kicker)} · 單元 ${String(m.id).padStart(2,'0')}</span><h2>${escape(m.title)}</h2><p class="lead">${escape(m.subtitle)}</p></div><span class="chapter-index" aria-hidden="true">${String(m.id).padStart(2,'0')}</span></div><div class="goal"><strong>學習目標</strong><span>${escape(m.goal)}</span></div><div class="prose">${m.paragraphs.map(p=>`<p>${escape(p)}</p>`).join('')}</div><div class="demo"><div class="demo-header"><h3>${demoTitles[m.id-1]}</h3><span class="pill">動手探索</span></div><div id="demo-container">${window.LessonDiagrams.render(m.id)}</div></div><div class="concept-grid">${m.concepts.map(c=>`<div class="concept"><h3>${escape(c.term)}</h3><p>${escape(c.text)}</p></div>`).join('')}</div><p class="takeaway">${escape(m.takeaway)}</p><div class="section-title"><span>把機制帶進情境</span><div class="line"></div></div><div class="question-list">${m.questions.map((q,i)=>question(q,m,i)).join('')}</div>${reflection(m.reflection)}<p class="source-note">本單元對應：《Networks》／陳嶽鵬，第 ${escape(m.pages)} 頁。示意圖與題目為原創教學設計。</p><div class="chapter-end"><p>回饋讓我們改變理解。<br>初答與重試都保留，方便看見自己的變化。</p><a class="btn" href="#${m.id===6?'summary':`module-${m.id+1}`}">${m.id===6?'回到同一張圖':`下一單元 ${String(m.id+1).padStart(2,'0')}`}</a></div>`;
+    window.LessonDiagrams.bind(m.id,document.getElementById('demo-container'));
+    m.questions.forEach(q=>bindQuestion(q,m));bindReflection(m.reflection);
+  }
+  function calibration(first) {
+    if(first.correct)return first.confidence>=75?'答對且把握高，試著用自己的話解釋。':'答對但把握仍可建立，可回看因果鏈。';
+    return first.confidence>=75?'初答把握高但需修正，留意被忽略的假設。':'已察覺不確定，可用解析補上機制。';
+  }
+  function summary() {
+    const count=answeredCount(),score=firstScore();
+    main.innerHTML=`<div class="page-head"><div><span class="eyebrow">REVISIT · 重新看見</span><h2>圖沒有變。<br>你的理解，改變了什麼？</h2><p class="lead">再看一次開場的輪廓。解讀變了或沒有變，都不是能力或人格的判定；這次試著說出，哪些網路機制可能參與其中。</p></div><span class="chapter-index" aria-hidden="true">07</span></div><div class="intro-layout"><div class="intro-visual">${window.LessonDiagrams.ambiguous()}<div class="figure-caption">與開場完全相同的圖形。這是知覺觀察，不是診斷工具。</div></div>${perception('end')}</div><div id="perception-comparison" class="comparison"></div><div class="section-title"><span>科學概念回顧</span><div class="line"></div></div><div class="summary-score"><strong>${score}<small style="font:1.4rem var(--sans)"> / 12</small></strong><span>初答答對<br>已作答 ${count} / 12 題</span></div><p class="small-note">重試不改寫初答分數。未作答題目另列；把握度是你的自我評估，不是能力測量或經校準的機率。</p><div class="summary-grid">${modules.map(m=>`<section class="concept-summary"><div class="concept-summary-title"><h3>${String(m.id).padStart(2,'0')} · ${escape(m.title)}</h3><a href="#module-${m.id}">回訪單元</a></div><ul>${m.questions.map(q=>{
+      const a=state.answers[q.id];if(!a)return `<li><strong>${escape(q.concept)}</strong>：尚未作答。</li>`;
+      const f=a.attempts[0],l=a.attempts.at(-1);
+      return `<li><strong>${escape(q.concept)}</strong>：初答${f.correct?'答對':'待修正'} · 把握 ${f.confidence}%。${escape(calibration(f))}${a.attempts.length>1?` 重試 ${a.attempts.length-1} 次，最近一次${l.correct?'答對':'仍待修正'}（把握 ${l.confidence}%）。`:''}</li>`;
+    }).join('')}</ul><p>${escape(m.takeaway)}</p><p>反思：${state.reflections[m.reflection.id]?.choice!=null?'已留下選擇，無正誤分數。':'可自由略過，無正誤分數。'}</p></section>`).join('')}</div><div class="callout">網路可以讓一種解讀變得穩定，但「穩定」不等於「正確」。回到證據、嘗試其他假設，仍是理解世界的必要工作。</div><div class="section-title"><span>來源與使用界線</span><div class="line"></div></div><p class="small-note">教材依陳嶽鵬《Networks》38 頁課堂投影片的主題重組，科學題解析標示各單元頁碼。所有圖解、情境與題目皆為原創；示意反應不代表真實生理數值。生活反思是類比與價值討論，不能直接由神經科學推導其標準答案。</p><p class="small-note" style="margin-top:12px">延伸閱讀：<a href="https://www.ncbi.nlm.nih.gov/books/NBK11059/" target="_blank" rel="noopener noreferrer">NCBI Bookshelf：Neuroscience（指定課程延伸閱讀）</a>。外部連結只在你點擊時開啟，不傳送本教材的作答紀錄。</p>${privacy()}<div class="action-row"><a class="btn btn-secondary" href="#intro">回到開場</a></div>`;
+    bindPerception('end');renderComparison();
+  }
+  function renderComparison() {
+    const el=document.getElementById('perception-comparison');if(!el)return;
+    const a=state.perception.start,b=state.perception.end;
+    if(!a||!b){el.textContent=!a?'開場觀察尚未保存；你仍可回到開場補上，也可以略過這個比較。':'留下這次觀察後，可在這裡比較前後解讀。';return;}
+    el.innerHTML=`<strong>兩次觀察，只與自己比較</strong><p>開場：${escape(perceptionOptions[a.choice])} · 清晰度 ${a.confidence}%。<br>現在：${escape(perceptionOptions[b.choice])} · 清晰度 ${b.confidence}%。</p><p>${a.choice===b.choice?'兩次選擇相同，仍可用新學到的機制解釋這個解讀。':'兩次選擇不同，可思考注意、經驗或提示如何改變圖地關係。'} 這個比較不能推論是哪個單一神經機制造成變化。</p>`;
+  }
+  function render(focus=false) {
+    let location=window.location.hash.slice(1)||'intro';
+    const m=modules.find(m=>location===`module-${m.id}`);
+    if(!m&&location!=='intro'&&location!=='summary')location='intro';
+    navRender(location);
+    if(m)modulePage(m);else if(location==='summary')summary();else intro();
+    document.title=`${m?m.title:location==='summary'?'回到同一張圖':'你所看見的世界，大腦如何共同完成？'}｜神經科學互動課`;
+    if(focus){main.focus({preventScroll:true});window.scrollTo({top:0,behavior:'instant'});}
+  }
+  window.addEventListener('hashchange',()=>render(true));
+  const dialog=document.getElementById('reset-dialog');
+    document.getElementById('reset-open').addEventListener('click',()=>{dialog.returnValue='cancel';dialog.showModal();});
+  dialog.addEventListener('close',()=>{
+    if(dialog.returnValue==='confirm'){
+      state=fresh();try{localStorage.removeItem(STORAGE_KEY);}catch{storageOK=false;}
+      render();announce('這份教材的本機紀錄已清除。');
+    }
+  });
+  render();
+})();
+</script>
+</body>
+</html>
